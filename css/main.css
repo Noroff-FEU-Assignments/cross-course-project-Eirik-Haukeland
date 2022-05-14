@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  background-color: #AF86C5;
+  width: auto;
+}
+
+header img.logo{
+  height: 5em;
+  margin: .5em;
+}
+
+.page-navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  width: fit-content;
+  height: 4em;
+  padding: .5em;
+  border-radius: .5em;
+  margin: .5em;
+  background-color: #F3F6DE;
+}
+a > img {
+  width: 2em;
+  height: 2em;
+}
+
+button > img {
+  width: 1em;
+  height: 1em;
+}
+
+body {
+  width: auto;
+  height: auto;
+}
