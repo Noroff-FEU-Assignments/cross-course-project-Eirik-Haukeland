@@ -2,25 +2,27 @@
   margin: 0;
 }
 
-header {
-  display: flex;
-  background-color: #AF86C5;
+:root {
+  --column-count: 12;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) repeat(var(--column-count) 1fr) minmax(1em, 1fr);
   width: auto;
+  height: auto;
+}
+
+header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  background-color: #AF86C5;
 }
 
 header img.logo{
   height: 5em;
   margin: .5em;
-}
-
-.page-navigation {
-  display: flex;
-  flex-direction: column;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
 }
 
 a {
@@ -39,9 +41,4 @@ a > img {
 button > img {
   width: 1em;
   height: 1em;
-}
-
-body {
-  width: auto;
-  height: auto;
 }
