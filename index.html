@@ -9,11 +9,8 @@
     content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"
     href="css/main.css">
-  <title>Document</title>
+  <title>Game Hub</title>
 </head>
-
-<body>
-
   <header>
     <img class="logo" src="images/GameHub_Logo.png" alt="GameHub_Logo">
     <div class="page-navigation">
@@ -45,80 +42,98 @@
           </li>
         </ul>
       </nav>
-      <form action="push">
-        <label for="search">search: </label>
-        <input type="text" name="" id="search">
-        <button type="submit"><img src="images/icons/search.svg" alt="search"></button>
+      <form action="post">
+        <label for="search_box">search</label>
+        <input type="text" name="search_box" id="search_box">
+        <label for="search_btn">search</label>
+        <button id="search_btn"><img src="images/icons/search.svg" alt="search"></button>
       </form>
     </div>
   </header>
   <main>
     <section aria-label="information on ouer site">
       <h1>The ungverse of games</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit ipsam perspiciatis corporis fugiat. Suscipit repellendus placeat tempora nemo facilis iste modi deleniti exercitationem optio? Tenetur nam sit veritatis alias.</p>
+      <p class="page_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit ipsam perspiciatis corporis fugiat. Suscipit repellendus placeat tempora nemo facilis iste modi deleniti exercitationem optio? Tenetur nam sit veritatis alias.</p>
     </section>
     <section aria-label="revue of ouer sites">
       <div class="revue_card">
         <img src="images/profile_pictures/jeff-lebowski_croped-150*150.jpg" alt="image of Jeff Lebowski">
+        <span>Jeff Lebowski</span>
         <p><strong><q>Yeah, well - the dude abides</q></strong></p>
-        <p>Jeff Lebowski</p>
       </div>
       <div class="revue_card">
         <img src="images/profile_pictures/clarise-starling_croped-300*300.jpg" alt="image of Calrise Starling">
+        <span>Clarise Startling</span>
         <p><strong><q>If he think's of you as his enemy, maybe we'd have better luck if I went in by my self</q></strong></p>
-        <p>Clarise Startling</p>
       </div>
       <div class="revue_card">
         <img src="images/profile_pictures/james-bond-nr.4_croped-300*300.jpg" alt="image go james bond the fourth">
+        <span>james bond the fourth</span>
         <p><strong><q>007 here. I'll report in an hour. ... Better make that two</q></strong></p>
-        <p>james bond the fourth</p>
       </div>
     </section>
-    <section aria-label="polulare games">
-      <div>
+    <section class="games" aria-label="polulare games">
+      <div class="game_card">
         <img src="images/assets/GameHub_covers_furious.jpg" alt="cover to furious">
-        <p><strong>Furious</strong></p>
-        <p></p>
+        <div>
+          <p class="game_card-title"><strong>Furious</strong></p>
+          <p class="game_card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img class="game_card-stars" src="images/icons/stars_1-star-rank.svg" alt="one out of five stars">
+        </div>
       </div>
-      <div>
+      <div class="game_card">
         <img src="images/assets/GameHub_covers_space-war.jpg" alt="cover to space war">
-        <p><strong>Space War</strong></p>
-        <p></p>
+        <div>
+          <p class="game_card-title"><strong>Space War</strong></p>
+          <p class="game_card-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <img class="game_card-stars" src="images/icons/stars_2-star-rank.svg" alt="one out of five stars">
+        </div>
       </div>
-      <div>
+      <div class="game_card">
         <img src="images/assets/GameHub_covers_forge-legend.jpg" alt="cover to forge legend">
-        <p><strong>Forge Legend</strong></p>
-        <p></p>
+        <div>
+          <p class="game_card-title"><strong>Forge Legend</strong></p>
+          <p class="game_card-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <img class="game_card-stars" src="images/icons/stars_3-star-rank.svg" alt="one out of five stars">
+        </div>
       </div>
-      <div>
+      <div class="game_card">
         <img src="images/assets/GameHub_covers_assassin.jpg" alt="cover to assassin">
-        <p><strong>Assassin</strong></p>
-        <p></p>
+        <div>
+          <p class="game_card-title"><strong>Assassin</strong></p>
+          <p class="game_card-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <img class="game_card-stars" src="images/icons/stars_4-star-rank.svg" alt="one out of five stars">
+        </div>
       </div>
     </section>
   </main>
   <footer>
-      <p>en</p>
-      <p>to</p>
-      <p>tre</p>
-      <p>fire</p>
-      <p>femm</p>
-      <p>seks</p>
-      <p>syv</p>
-      <p>åtte</p>
-      <p>ni</p>
-      <p>ti</p>
-      <p>en</p>
-      <p>to</p>
-      <p>tre</p>
-      <p>fire</p>
-      <p>femm</p>
-      <p>seks</p>
-      <p>syv</p>
-      <p>åtte</p>
-      <p>ni</p>
-      <p>ti</p>
+    <section>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="all_games_page.html">Games</a></li>
+      </ul>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sopping_cart.html">Shopping cart</a></li>
+      </ul>
+    </section>
+    <section>
+      <ul id="sosial_links">
+        <li><a href="twitter.com"><img src="images/icons/twitter-logo.svg" alt="twitter icon"></a></li>
+        <li><a href="mailto:mail@gamehub.com"><img src="images/icons/mail.svg" alt="mail icon"></a></li>
+        <li><a href="facebook.com"><img src="images/icons/facebook-logo.svg" alt="facebook icon"></a></li>
+      </ul>
+    </section>
   </footer>
-</body>
-
 </html>

@@ -1,21 +1,17 @@
 * {
   margin: 0;
-}
-
-body {
-  width: auto;
-  height: auto;
+  padding: 0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #AF86C5;
+  background-color: #af86c5;
+  padding: 0.25rem 0.5rem;
 }
 
-header img.logo{
-  height: 4em;
-  margin: .25em;
+header img.logo {
+  max-width: 5rem;
 }
 
 .page-navigation {
@@ -23,58 +19,167 @@ header img.logo{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-end;
+  gap: 0.25rem;
 }
 
-.page-navigation ul{
-  list-style: none;
+.page-navigation ul {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.page-navigation form {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.page-navigation input[type="text"] {
+  background-color: #f3f6de;
+  padding: 0.15rem;
+  width: 11rem;
+  border-radius: 0.25rem;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .page-navigation button,
 .nav-item {
-  padding: .25em;
-  border-radius: .25em;
-  background-color: #F3F6DE;
-  margin: .1em;
+  display: inline-flex;
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  background-color: #f3f6de;
+  border: none;
 }
 
-.page-navigation img{
-  width: 1em;
-  height: 1em;
-}
-
-.page-navigation input[type="text"] {
-  background-color: #F3F6DE;
-  width: 12em;
-  border-radius: .25em;
+.page-navigation img {
+  max-width: 1rem;
 }
 
 .nav-item span,
-.page-navigation label{
+.page-navigation label {
   position: absolute;
-  top: -1000em;
+  top: -1000rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #f3f6de;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem 0 0.25rem;
+}
+
+.page_desc {
+  max-width: 18rem;
+  margin-bottom: 1rem;
 }
 
 .revue_card {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .revue_card img {
-  border-radius: 50em;
-  width: 5em;
-  align-self: center;
+  border-radius: 100%;
+  max-width: 5rem;
+}
+
+.revue_card p,
+.revue_card span {
+  max-width: 14rem;
+  text-align: center;
+}
+
+.game_card {
+  justify-self: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.game_card img {
+  width: 30%;
+  object-fit: scale-down;
+}
+
+.game_card div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* .game_card-title {
+  text-: 3rem;
+} */
+
+.game_card-desc {
+  width: 8rem;
+}
+
+.game_card-stars {
+  justify-self: flex-end;
+  height: 3rem;
+  width: auto;
 }
 
 footer {
   display: flex;
+  flex-direction: column;
+  background-color: #af86c5;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem;
+}
+
+footer section {
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer section:first-child {
+  margin-left: 1.5rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  list-style: none;
+  align-content: center;
+}
+
+#sosial_links {
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0;
+}
+
+#sosial_links a {
+  display: inline-flex;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  background-color: #f3f6de;
+}
+
+#sosial_links img {
+  max-width: 1rem;
+  max-height: 1rem;
 }
