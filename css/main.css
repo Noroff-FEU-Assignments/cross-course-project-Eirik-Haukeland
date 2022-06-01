@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -63,6 +66,7 @@ main section h2 {
   top: -1000rem;
 }
 
+
 main {
   display: flex;
   flex-direction: column;
@@ -80,13 +84,14 @@ main section {
 }
 
 h1 {
-  font-size: 2rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.7rem;
   text-align: center;
   margin: 1rem 0 0.25rem;
 }
 
 p, a{
-  font-size: 1.25rem;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .page_desc {
@@ -130,7 +135,8 @@ p, a{
 }
 
 .game_card-title {
-  font-size: 1.5rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.2rem;
 }
 
 .game_card-desc {
