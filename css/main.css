@@ -8,6 +8,7 @@
 
 body {
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 header {
@@ -62,6 +63,15 @@ header img.logo {
   align-items: center;
 }
 
+.page-navigation button:hover,
+.nav-item:hover,
+.page-navigation input[type="text"]:hover,
+.page-navigation input[type="text"]:focus,
+#sosial_links a:hover {
+  outline: none;
+  background-color: #d3d6be;
+}
+
 .page-navigation img {
   max-width: 1rem;
   max-height: 1rem;
@@ -97,6 +107,10 @@ main {
   display: inline-block;
   margin-right: -.5rem;
   width: 23%;
+}
+
+.bread_crumbs li:not(:last-of-type) a:hover{
+  background-color: #6E6873;
 }
 
 .bread_crumbs li:last-of-type {
@@ -192,6 +206,12 @@ span{
   gap: 1rem;
 }
 
+.game_card:hover {
+  background-color: #e3e6ce;
+  border-radius: .5rem;
+  padding: .25rem;
+}
+
 .game_card img {
   max-width: 5rem;
   object-fit: contain;
@@ -240,6 +260,14 @@ footer ul {
   gap: 0.25rem;
   list-style: none;
   align-content: center;
+}
+
+footer ul a {
+  color: #F3F6DEcc;
+}
+
+footer ul a:hover {
+  color: #F3F6DEff;
 }
 
 #sosial_links {
