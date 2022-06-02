@@ -153,11 +153,14 @@ h1 {
   font-size: 1.7rem;
   text-align: center;
   margin: 1rem 0 0.25rem;
+  color: #4A4A1C;
 }
 
 p,
-a {
+a,
+span{
   font-family: "Noto Sans", sans-serif;
+  color: #4A4A1C;
 }
 
 .page_desc {
@@ -247,8 +250,6 @@ footer ul {
 
 #sosial_links a {
   display: inline-flex;
-  /* justify-content: center;
-        align-items: center; */
   padding: 0.4rem;
   border-radius: 0.25rem;
   background-color: #f3f6de;
@@ -304,7 +305,6 @@ footer ul {
   }
 
   .page_desc {
-    /* text-align: center; */
     max-width: 50rem;
     margin: 0 1.5rem 1rem;
   }
