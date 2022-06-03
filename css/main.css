@@ -99,7 +99,7 @@ main section h2 {
   background-color: hsl(272.7, 4.4%, 49.2%);
 }
 
-.bread_crumbs li:first-child a {
+.bread_crumbs li:first-child > * {
   padding-left: 3em;
 }
 
