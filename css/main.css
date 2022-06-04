@@ -35,8 +35,13 @@ header {
   height: 5rem;
 }
 
-header img.logo {
+header > a {
+  height: 100%;
   margin-right: 1rem;
+}
+
+header img.logo {
+  height: 100%;
 }
 
 .page-navigation {
