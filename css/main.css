@@ -6,17 +6,32 @@
   padding: 0;
 }
 
+:root {
+  --back-ground_purpule: hsl(279, 35.2%, 64.9%);
+  --back-ground_yellow: hsl(67.5, 57.1%, 91.8%);
+  --back-ground_yellow_on-hower: hsl(67.5, 22.6%, 79.2%);
+  --text-color_dark: hsl(60, 45.1%, 20%);
+  --text-color_ligth: hsl(32.3, 20%, 87.3%);
+  --text-color_ligth_on-hower: hsl(67.5, 57.1%, 91.8%);
+  --breadcrumb_previus-page: hsl(320, 1.5%, 60.2%);
+  --breadcrumb_previus-page_darkend: hsl(272.7, 4.4%, 49.2%);
+  --breadcrumb_current-page: hsl(283.9, 28.3%, 71.6%);
+
+  --font_style_serif: "Noto Serif", serif;
+  --font_style_sans: "Noto Sans", sans-serif;
+}
+
 body {
   overflow-x: hidden;
-  box-sizing: border-box;
-  background-color: #f3f6de;
+  background-color: var(--back-ground_yellow);
 }
 
 header {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  background-color: #af86c5;
-  padding: 0.25rem 0.5rem;
+  background-color: var(--back-ground_purpule);
+  padding: .4rem;
   height: 5rem;
 }
 
@@ -27,7 +42,7 @@ header img.logo {
 .page-navigation {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-end;
   gap: 0.25rem;
 }
@@ -46,7 +61,7 @@ header img.logo {
 
 .page-navigation input[type="text"] {
   width: 100%;
-  background-color: #f3f6de;
+  background-color: var(--back-ground_yellow);
   padding: 0.15rem;
   border-radius: 0.25rem;
   border: none;
@@ -59,10 +74,9 @@ header img.logo {
   display: inline-flex;
   padding: 0.4rem;
   border-radius: 0.25rem;
-  background-color: #f3f6de;
+  background-color: var(--back-ground_yellow);
   border: none;
   text-decoration: none;
-  color: black;
   align-items: center;
 }
 
@@ -72,7 +86,7 @@ header img.logo {
 .page-navigation input[type="text"]:focus,
 #sosial_links a:hover {
   outline: none;
-  background-color: #d3d6be;
+  background-color: var(--back-ground_yellow_on-hower);
 }
 
 .page-navigation img {
@@ -96,33 +110,33 @@ main section h2 {
 }
 
 .bread_crumbs li:not(:last-child) a:hover {
-  background-color: hsl(272.7, 4.4%, 49.2%);
+  background-color: var(--breadcrumb_previus-page_darkend);
 }
 
 .bread_crumbs li:first-child > * {
-  padding-left: 3em;
+  padding-left: 3rem;
 }
 
 .bread_crumb-item {
   text-decoration: none;
   padding: 0 1.1rem 0 1rem;
-  border-right: 0.25rem solid hsl(272.7, 4.4%, 49.2%);
-  background-color: hsl(320, 1.5%, 60.2%);
+  border-right: 0.25rem solid var(--breadcrumb_previus-page_darkend);
+  background-color: var(--breadcrumb_previus-page);
   box-sizing: border-box;
   display: block;
   transform: skewX(-50deg);
 }
 
 .bread_crumb-item div {
-  color: #f3f6de;
-  font-family: "Noto Serif", serif;
+  color: var(--text-color_ligth);
+  font-family: var(--font_style_serif);
   font-size: 0.8rem;
   transform: skewX(50deg);
   white-space: nowrap;
 }
 
 .bread_crumbs li:last-child > * {
-  background-color: hsl(283.9, 28.3%, 71.6%);
+  background-color: var(--breadcrumb_current-page);
   border: none;
   padding: 0, 3rem;
 }
@@ -143,19 +157,19 @@ main section {
 }
 
 h1 {
-  font-family: "Noto Serif", serif;
+  font-family: var(--font_style_serif);
   font-size: 1.7rem;
   text-align: center;
   margin: 1rem 0 0.25rem;
-  color: #4a4a1c;
+  color: var(--text-color_dark);
 }
 
 p,
 a,
 span,
 input[type="text"] {
-  font-family: "Noto Sans", sans-serif;
-  color: #4a4a1c;
+  font-family: var(--font_style_sans);
+  color: var(--text-color_dark);
 }
 
 .page_desc {
@@ -189,7 +203,7 @@ input[type="text"] {
 }
 
 .game_card:hover {
-  background-color: #e3e6ce;
+  background-color: var(--back-ground_yellow_on-hower);
   border-radius: 0.5rem;
 }
 
@@ -205,7 +219,7 @@ input[type="text"] {
 }
 
 .game_card-title {
-  font-family: "Noto Serif", serif;
+  font-family: var(--font_style_serif);
   font-size: 1.2rem;
 }
 
@@ -220,7 +234,7 @@ input[type="text"] {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #af86c5;
+  background-color: var(--back-ground_purpule);
   align-items: center;
   gap: 1rem;
   padding: 2.5rem;
@@ -244,16 +258,16 @@ footer ul {
 }
 
 footer ul a {
-  color: #f3f6decc;
+  color: var(--text-color_ligth);
 }
 
 footer ul a:hover {
-  color: #f3f6deff;
+  color: var(--text-color_ligth_on-hower);
 }
 
 #sosial_links {
   flex-direction: row;
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 0;
 }
 
@@ -261,12 +275,12 @@ footer ul a:hover {
   display: inline-flex;
   padding: 0.4rem;
   border-radius: 0.25rem;
-  background-color: #f3f6de;
+  background-color: var(--back-ground_yellow);
 }
 
 #sosial_links img {
   max-width: 1rem;
-  max-height: 1rem;
+  height: auto;
 }
 
 @media only screen and (min-width: 600px) {
@@ -276,6 +290,10 @@ footer ul a:hover {
 
   .nav-item span {
     position: static;
+  }
+
+  .bread_crumb-item div {
+    font-size: 1rem;
   }
 
   main section:not(:nth-of-type(1)) {
