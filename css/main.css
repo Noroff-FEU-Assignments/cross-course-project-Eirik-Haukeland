@@ -288,6 +288,11 @@ footer ul a:hover {
   height: auto;
 }
 
+footer span{
+  color: var(--text-color_ligth);
+  text-align: center;
+}
+
 @media only screen and (min-width: 600px) {
   header img.logo {
     margin-right: 0.5rem;
