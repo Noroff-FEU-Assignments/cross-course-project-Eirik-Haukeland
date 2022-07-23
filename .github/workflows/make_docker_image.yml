@@ -47,5 +47,5 @@ jobs:
         uses: emilhauk/deploy-site-action@master
         with: 
           secret: ${{ secrets.DEPLOY_KEY }}
-          deplyment_server: http://ebh.fyi:3000
+          deployment_server: http://ebh.fyi:3000
           image: ${{ steps.meta.outputs.tags }}
