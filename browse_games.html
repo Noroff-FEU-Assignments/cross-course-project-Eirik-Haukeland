@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/ico">
   <meta name="description" content="browse computer games on Game Hub">
+  <script src="js/main.js" defer type="module"></script>
   <title>Game Hub</title>
 </head>
 <header>
@@ -58,13 +59,34 @@
     </a>
   </li>
   <li>
-    <span class="bread_crumbs-item">
+    <span class="bread_crumb-item">
       <div>Games</div>
     </span>
   </li>
 </ul>
 <main>
+  <form action="" method="get">
+    <label for="category"></label>
+    <input type="text" class="category">
+    <label for="search_feld"></label>
+    <input type="text" class="search_feld">
+  </form>
 
+  <button id="test">text</button>
+  <section id="game_list" >
+    <hr>
+    <a class="game_card" href="browse_games.html" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_assassin.jpg" alt="cover to assassin">
+      <div>
+        <p class="game_card-title"><strong>Assassin</strong></p>
+        <p class="game_card-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <img class="game_card-stars" src="images/icons/stars_4-star-rank.svg" alt="one out of five stars">
+      </div>
+    </a>
+    <hr>
+  </section>
 </main>
 <footer>
   <section>
