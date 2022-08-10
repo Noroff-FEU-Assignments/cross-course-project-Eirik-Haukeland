@@ -41,11 +41,11 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          
-      - name: Deploy to server
-        if: ${{ github.ref_name == 'main' }}
-        uses: emilhauk/deploy-site-action@master
-        with: 
-          secret: ${{ secrets.DEPLOY_KEY }}
-          deployment_server: http://ebh.fyi:3000
-          image: ${{ steps.meta.outputs.tags }}
+
+      #- name: Deploy to server
+      #  if: ${{ github.ref_name == 'main' }}
+      #  uses: emilhauk/deploy-site-action@master
+      #  with:
+      #    secret: ${{ secrets.DEPLOY_KEY }}
+      #    deployment_server: http://ebh.fyi:3000
+      #    image: ${{ steps.meta.outputs.tags }}
