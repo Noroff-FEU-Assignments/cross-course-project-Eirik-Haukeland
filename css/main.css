@@ -8,6 +8,7 @@
 
 :root {
   --back-ground_purpule: hsl(279, 35.2%, 64.9%);
+  --back-ground_purpule-ligth: hsla(279, 35.2%, 64.9%, 45%);
   --back-ground_yellow: hsl(67.5, 57.1%, 91.8%);
   --back-ground_yellow_on-hower: hsl(67.5, 22.6%, 79.2%);
   --text-color_dark: hsl(60, 45.1%, 20%);
