@@ -175,7 +175,9 @@ h1 {
 p,
 a,
 span,
-input[type="text"] {
+input[type="text"],
+label,
+button {
   font-family: var(--font_style_sans);
   color: var(--text-color_dark);
 }

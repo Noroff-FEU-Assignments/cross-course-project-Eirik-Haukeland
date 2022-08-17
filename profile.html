@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
   <link rel="stylesheet" href="css/profile.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/ico">
 </head>
+
 <body>
   <header>
     <a href="index.html">
@@ -56,7 +58,7 @@
   </header>
   <ul class="bread_crumbs">
     <li>
-      <a class="bread_crumb-item"  href="index.html">
+      <a class="bread_crumb-item" href="index.html">
         <div>Home</div>
       </a>
     </li>
@@ -68,22 +70,26 @@
   </ul>
   <main>
     <section class="accordion">
-      <button>user profile</button>
-      <div id="user-info" class="accordion-info" hidden>
-        <div class="left">
+      <button class="active">user profile</button>
+      <div id="user-info">
+        <div class="user-info">
           <img src="images/icons/profile.svg" alt="profile picture">
-          <p>ola Norman</p>
-          <p>age: 22</p>
-        </div>
-        <div class="right">
-          <label for="email-addr">email:</label>
-          <p id="email-addr">ola-norman@email.com</p>
-          <label for="phone-number">phone number:</label>
-          <p id="phone-number">+47 111 22 333</p>
+          <div>
+            <p>ola Norman</p>
+            <p>age: 22</p>
+          </div>
+          <div>
+            <label for="email-addr">email:</label>
+            <p id="email-addr">ola-norman@email.com</p>
+          </div>
+          <div>
+            <label for="phone-number">phone number:</label>
+            <p id="phone-number">+47 111 22 333</p>
+          </div>
         </div>
       </div>
-      <button class="active">password</button>
-      <div>
+      <button>password</button>
+      <div hidden>
         <form action="" method="get" id="password-settings" class="text-form">
           <label for="current-pass">current password</label>
           <input type="password" name="current-pass" id="current-pass">
@@ -91,34 +97,40 @@
           <input type="password" name="new-pass" id="new-pass">
           <label for="rep-new-pass">repeat new password</label>
           <input type="password" name="rep-new-pass" id="rep-new-pass">
-          <button class="btn-prim">change password</button>
+          <div>
+            <button>change password</button>
+          </div>
         </form>
       </div>
       <button>payment detals</button>
-      <div id="payment-detales" class="accordion-info" hidden>
-        <button>
-          <img src="images/icons/vipps_log" alt="logo for vipps">
-        </button>
-        <button>
-          <img src="images/icons/visa_logo" alt="logo for visa">
-        </button>
-        <button>
-          <img src="images/icons/master-card_logo" alt="logo for master card">
-        </button>
-        <button>
-          <img src="images/icons/paypal_logo" alt="logo for paypal">
-        </button>
-        <form action="" method="get">
-          <label for="card-numb">card number</label>
-          <input type="text" id="card-numb">
-          <label for="card-name">name on card</label>
-          <input type="text" id="card-name">
-          <label for="card-expiers">experation date</label>
-          <input type="text" id="card-expiers">
-          <label for="sec-code">security code</label>
-          <input type="text" id="sec-code">
-          <button class="btn-prim">update preferd payment</button>
-        </form>
+      <div hidden>
+        <div class="payment">
+          <button>
+            <img src="images/icons/vipps_log" alt="logo for vipps">
+          </button>
+          <button>
+            <img src="images/icons/visa_logo" alt="logo for visa">
+          </button>
+          <button>
+            <img src="images/icons/master-card_logo" alt="logo for master card">
+          </button>
+          <button>
+            <img src="images/icons/paypal_logo" alt="logo for paypal">
+          </button>
+          <form action="" method="get" id="">
+            <label for="card-numb">card number</label>
+            <input type="text" id="card-numb">
+            <label for="card-name">name on card</label>
+            <input type="text" id="card-name">
+            <label for="card-expiers">experation date</label>
+            <input type="text" id="card-expiers">
+            <label for="sec-code">security code</label>
+            <input type="text" id="sec-code">
+            <div>
+              <button>update preferd payment</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -147,4 +159,5 @@
     <span>&copy copyright 2022</span>
   </footer>
 </body>
+
 </html>

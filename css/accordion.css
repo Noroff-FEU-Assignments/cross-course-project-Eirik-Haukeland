@@ -1,5 +1,5 @@
 .accordion {
-  max-width: 85%;
+  width: 85%;
   margin-block: 2rem;
   border: solid black 0.05rem;
   display: grid;
@@ -33,6 +33,7 @@
 }
 
 .accordion > div {
+  width: 100%;
   display: flex;
   grid-column: span 3;
   justify-content: center;
@@ -47,7 +48,7 @@ div[hidden] {
     grid-template-columns: 1fr;
     width: auto;
   }
-
+  
   .accordion > button {
     grid-row: span 1;
     background-image: url(../images/icons/pointer.svg);
