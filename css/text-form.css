@@ -1,0 +1,48 @@
+.text-form{
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  padding-block: 1.5rem;
+  margin: 1rem;
+  align-items: center;
+}
+
+.text-form > input,
+.text-form > label,
+.text-form > button {
+  margin-top: .5rem;
+  max-width: 75%;
+  border-radius: .25rem;
+}
+
+.text-form > input{
+  border: solid black .05rem;
+  background-color: var(--back-ground_yellow);
+}
+
+.text-form > input:hover,
+.text-form > input:focus {
+  outline: none;
+  background-color: var(--back-ground_yellow_on-hower);
+}
+
+.text-form > button {
+  background-color: var(--back-ground_purpule);
+  border: none;
+  padding: .25rem;
+  cursor: pointer;
+}
+
+.text-form > button:not(:first-child) {
+  background-color: var(--breadcrumb_current-page);
+}
+
+@media only screen and (max-width: 515px) {
+  .text-form > input,
+  .text-form > label,
+  .text-form > button {
+    margin-top: .5rem;
+    width: 75%;
+    border-radius: .25rem;
+  }
+}

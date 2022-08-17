@@ -1,0 +1,57 @@
+.accordion {
+  width: 85%;
+  margin-block: 2rem;
+  border: solid black 0.05rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0rem;
+}
+
+.accordion > button {
+  grid-row: 1 / 2;
+  border: 0;
+  border-bottom: solid hsl(0, 0, 0) 0.05rem;
+  padding: .5rem;
+  background-color: var(--back-ground_purpule-ligth);
+  cursor: pointer;
+}
+
+.accordion > button:not(:last-of-type) {
+  border-right: solid black 0.05rem;
+}
+
+.accordion > button.active {
+  background-color: var(--back-ground_purpule);
+}
+
+.accordion > div {
+  grid-column: span 3;
+}
+
+[hidden] {
+  display: none;
+}
+
+@media only screen and (max-width: 515px) {
+  .accordion {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+
+  .accordion > button {
+    grid-row: span 1;
+    background-image: url(../images/icons/pointer.svg);
+    background-repeat: no-repeat;
+    background-position: 98%;
+    background-size: 1.5rem;
+    text-align: left;
+  }
+
+  .accordion > button.active {
+    background-image: url(../images/icons/pointer-flipped.svg);
+  }
+
+  .accordion > div {
+    grid-column: span 1;
+  }
+}
