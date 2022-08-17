@@ -1,15 +1,13 @@
 .text-form{
   display: flex;
   flex-direction: column;
-  padding-inline: 1rem;
   padding-block: 1.5rem;
-  margin: 1rem;
   align-items: center;
 }
 
 .text-form > input,
 .text-form > label,
-.text-form > button {
+.text-form > div > button {
   margin-top: .5rem;
   max-width: 75%;
   border-radius: .25rem;
@@ -26,23 +24,37 @@
   background-color: var(--back-ground_yellow_on-hower);
 }
 
-.text-form > button {
-  background-color: var(--back-ground_purpule);
+.text-form > div {
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+}
+
+.text-form > div > button {
+  background-color: var(--back-ground_purpule-mid-high);
   border: none;
   padding: .25rem;
   cursor: pointer;
 }
 
-.text-form > button:not(:first-child) {
-  background-color: var(--breadcrumb_current-page);
+.text-form > div > button:hover {
+  background-color: var(--back-ground_purpule);
+}
+
+.text-form > div > button:not(:first-of-type) {
+  background-color: var(--back-ground_purpule-ligth);
+}
+
+.text-form > div > button:not(:first-of-type):hover {
+  background-color: var(--back-ground_purpule-medium);
 }
 
 @media only screen and (max-width: 515px) {
   .text-form > input,
   .text-form > label,
-  .text-form > button {
+  .text-form > div > button {
     margin-top: .5rem;
-    width: 75%;
     border-radius: .25rem;
   }
 }

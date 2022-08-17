@@ -1,5 +1,5 @@
 .accordion {
-  width: 85%;
+  max-width: 85%;
   margin-block: 2rem;
   border: solid black 0.05rem;
   display: grid;
@@ -10,10 +10,14 @@
 .accordion > button {
   grid-row: 1 / 2;
   border: 0;
-  border-bottom: solid hsl(0, 0, 0) 0.05rem;
+  border-bottom: solid black 0.05rem;
   padding: .5rem;
   background-color: var(--back-ground_purpule-ligth);
   cursor: pointer;
+}
+
+.accordion > button:hover {
+  background-color: var(--back-ground_purpule-medium);
 }
 
 .accordion > button:not(:last-of-type) {
@@ -21,14 +25,20 @@
 }
 
 .accordion > button.active {
+  background-color: var(--back-ground_purpule-mid-high);
+}
+
+.accordion > button.active:hover {
   background-color: var(--back-ground_purpule);
 }
 
 .accordion > div {
+  display: flex;
   grid-column: span 3;
+  justify-content: center;
 }
 
-[hidden] {
+div[hidden] {
   display: none;
 }
 

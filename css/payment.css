@@ -1,0 +1,71 @@
+.payment {
+  margin: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 50%;
+}
+
+.payment > button {
+  background-color: var(--back-ground_purpule-ligth);
+  border: none;
+  cursor: pointer;
+  margin-inline: 0.5rem;
+}
+
+.payment > form {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.payment > form > input,
+.payment > form > label {
+  grid-column: 2 / span 2;
+  margin-block: 0.25rem;
+  max-width: 100%;
+  border-radius: 0.25rem;
+}
+
+.payment > form > label {
+  text-align: center;
+}
+
+.payment > form > input {
+  border: solid black 0.05rem;
+  background-color: var(--back-ground_yellow);
+}
+
+.payment > form > input:hover,
+.payment > form > input:focus {
+  outline: none;
+  background-color: var(--back-ground_yellow_on-hower);
+}
+
+.payment > form > div {
+  margin-top: 0.5rem;
+  grid-row: 9 / 10;
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.payment > form > div > button {
+  background-color: var(--back-ground_purpule-mid-high);
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.payment > form > div > button:hover {
+  background-color: var(--back-ground_purpule);
+}
+
+.payment > form > div > button:not(:first-child) {
+  background-color: var(--back-ground_purpule-ligth);
+}
+
+.payment > button:hover,
+.payment > form > div > button:not(:first-child):hover {
+  background-color: var(--back-ground_purpule-medium);
+}
