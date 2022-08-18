@@ -1,7 +1,6 @@
 .text-form{
   display: flex;
   flex-direction: column;
-  padding-block: 1.5rem;
   align-items: center;
 }
 
