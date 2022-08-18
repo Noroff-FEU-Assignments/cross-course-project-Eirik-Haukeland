@@ -1,6 +1,9 @@
 FROM node:18.7-alpine3.16
 
 ADD . /app
+WORKDIR /app
+RUN npm i
+
 WORKDIR /app/backend
 
 ENV PORT=80
