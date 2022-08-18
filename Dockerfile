@@ -1,4 +1,9 @@
-FROM nginx:1-alpine
+FROM node:18.7-alpine3.16
 
 ADD . /app
-ADD nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app/backend
+
+ENV PORT=80
+EXPOSE 80
+
+CMD [ "server.js" ]
