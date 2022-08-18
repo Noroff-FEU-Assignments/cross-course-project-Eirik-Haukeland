@@ -1,3 +1,3 @@
-import { accordion } from "./accordion.js";
+import accordion from './accordion.js';
 
-accordion()
+accordion();
