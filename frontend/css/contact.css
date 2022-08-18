@@ -1,0 +1,103 @@
+:root {
+  --contact-grid-scale: 2rem
+}
+
+#contact{
+  margin-top: 2rem;
+  justify-content: center;
+  display: grid;
+  width: 100%;
+  grid-template: 
+              "h1 h1" calc(var(--contact-grid-scale) * 3)
+              "firstpar email-label" calc(var(--contact-grid-scale) * .5)
+              "firstpar email-a" calc(var(--contact-grid-scale) * 2)
+              "img phone-label" calc(var(--contact-grid-scale) * 2)
+              "img phone-a" calc(var(--contact-grid-scale) * 2)
+              "img social-label" calc(var(--contact-grid-scale) * 2)
+              "img social-ul"calc(var(--contact-grid-scale) * 2) / auto auto;
+}
+#contact > h1{
+  grid-area: h1;
+  margin-bottom: 1rem;
+}
+
+#contact > img{
+  grid-area: img;
+  height: 100%;
+}
+
+#contact > p:first-of-type {
+  grid-area: firstpar;
+  width: 50%;
+  margin-bottom: .25rem;
+}
+
+label[for="email"]{
+  grid-area: email-label;
+}
+
+a#email{
+  grid-area: email-a;
+}
+
+label[for="phone"]{
+  grid-area: phone-label;
+}
+
+a#phone{
+  grid-area: phone-a;
+}
+
+label[for="socials"]{
+  grid-area: social-label;
+  /* align-self: baseline; */
+}
+
+#socials{
+  /* align-self: start; */
+  display: flex;
+  grid-area: social-ul;
+}
+
+#socials > li {
+  display: block;
+  padding-right: 2rem;
+}
+
+#socials > li > a > img {
+  width: 2rem;
+}
+
+#contact > img
+#email,
+#phone,
+#socials{
+  align-self: start;
+}
+
+#contact > p:first-of-type,
+label[for="email"],
+label[for='phone'],
+label[for='socials']{
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+
+  #contact {
+    grid-template-rows: calc(var(--contact-grid-scale) * 2) calc(var(--contact-grid-scale) * .5) repeat(5, calc(var(--contact-grid-scale) * 1));
+    grid-template-columns: 50vw auto;
+    column-gap: .5rem;
+  }
+
+  #contact > p:first-of-type {
+    width: unset;
+  }
+
+  #contact > img {
+    height: 10rem;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+}

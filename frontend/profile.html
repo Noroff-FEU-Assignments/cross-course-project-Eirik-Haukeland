@@ -70,8 +70,8 @@
   </ul>
   <main>
     <section class="accordion">
-      <button class="active">user profile</button>
-      <div id="user-info">
+      <button id="user-info-btn" class="active">user profile</button>
+      <div id="user-info-div">
         <div class="user-info">
           <img src="images/icons/profile.svg" alt="profile picture">
           <div>
@@ -88,34 +88,34 @@
           </div>
         </div>
       </div>
-      <button>password</button>
-      <div hidden>
+      <button id="change-password-btn">password</button>
+      <div id="change-password-div" hidden>
         <form action="" method="get" id="password-settings" class="text-form">
           <label for="current-pass">current password</label>
           <input type="password" name="current-pass" id="current-pass">
           <label for="new-pass">new password</label>
           <input type="password" name="new-pass" id="new-pass">
-          <label for="rep-new-pass">repeat new password</label>
+          <label for="rep-new-pass">repeat password</label>
           <input type="password" name="rep-new-pass" id="rep-new-pass">
           <div>
             <button>change password</button>
           </div>
         </form>
       </div>
-      <button>payment detals</button>
-      <div hidden>
+      <button id="payment-detals-btn">payment detals</button>
+      <div id="payment-detals-div" hidden>
         <div class="payment">
           <button>
-            <img src="images/icons/vipps_log" alt="logo for vipps">
+            <img src="images/icons/vipps_logo.svg" alt="logo for vipps">
           </button>
           <button>
-            <img src="images/icons/visa_logo" alt="logo for visa">
+            <img src="images/icons/visa_logo.svg" alt="logo for visa">
           </button>
           <button>
-            <img src="images/icons/master-card_logo" alt="logo for master card">
+            <img src="images/icons/master-card_logo.svg" alt="logo for master card">
           </button>
           <button>
-            <img src="images/icons/paypal_logo" alt="logo for paypal">
+            <img src="images/icons/paypal_logo.svg" alt="logo for paypal">
           </button>
           <form action="" method="get" id="">
             <label for="card-numb">card number</label>

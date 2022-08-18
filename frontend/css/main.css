@@ -146,7 +146,7 @@ main section h2 {
 .bread_crumbs li:last-child > * {
   background-color: var(--breadcrumb_current-page);
   border: none;
-  padding: 0, 3rem;
+  padding-inline: 3rem;
 }
 
 main {
