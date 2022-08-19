@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.text-form > label{
+  margin-top: .75rem;
+  margin-left: 1.7rem;
+  align-self: flex-start;
+}
+
 .text-form > input,
 .text-form > label,
 .text-form > div > button {
@@ -28,6 +34,7 @@
   display: flex;
   gap: .5rem;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .text-form > div > button {
@@ -35,6 +42,7 @@
   border: none;
   padding: .25rem;
   cursor: pointer;
+  min-width: 60%;
 }
 
 .text-form > div > button:hover {
@@ -56,4 +64,11 @@
     margin-top: .5rem;
     border-radius: .25rem;
   }
+}
+
+@media only screen and (max-width: 400px) {
+  .text-form > div {
+    flex-direction: column;
+    align-items: center
+  };
 }

@@ -1,7 +1,7 @@
 .payment {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 50%;
+  max-width: 80%;
 }
 
 .payment > button {
@@ -41,11 +41,11 @@
 }
 
 .payment > form > div {
+  display: flex;
+  justify-content: center;
   margin-top: 0.5rem;
   grid-row: 9 / 10;
   grid-column: span 4;
-  display: flex;
-  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -54,6 +54,7 @@
   border: none;
   padding: 0.25rem;
   cursor: pointer;
+  width: 50%;
 }
 
 .payment > form > div > button:hover {
@@ -67,4 +68,17 @@
 .payment > button:hover,
 .payment > form > div > button:not(:first-child):hover {
   background-color: var(--back-ground_purpule-medium);
+}
+
+@media only screen and (max-width: 600px) {
+  .payment > form > div {
+    flex-direction: column;
+    align-items: center;
+  };
+
+  .payment > form > label,
+  .payment > form > input,
+  .payment > form > div > button {
+    width: auto;
+  }
 }

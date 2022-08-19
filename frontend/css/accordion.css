@@ -37,17 +37,18 @@
   display: flex;
   grid-column: span 3;
   justify-content: center;
-  padding: 1rem;
 }
 
-div[hidden] {
-  display: none;
-}
+
 
 @media only screen and (max-width: 515px) {
+  main {
+    padding-inline: unset;
+  }
+
   .accordion {
+    width: 100vw;
     grid-template-columns: 1fr;
-    width: auto;
   }
   
   .accordion > button {
@@ -64,6 +65,13 @@ div[hidden] {
   }
 
   .accordion > div {
+    display: flex;
+    align-items: center;
+    padding-block: 1rem;
     grid-column: span 1;
   }
+}
+
+div[hidden] {
+  display: none;
 }

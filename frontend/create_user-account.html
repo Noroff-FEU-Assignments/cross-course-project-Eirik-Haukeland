@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/text-form.css">
+  <link rel="stylesheet" href="css/create-user.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/ico">
-  <title>Game Hub - about us</title>
+  <title>Game Hub - create user</title>
 </head>
 <header>
   <a href="index.html">
@@ -36,7 +37,7 @@
           </a>
         </li>
         <li>
-          <a href="create_user-account.html" rel="noopener noreferrer" class="nav-item">
+          <a href="profile.html" rel="noopener noreferrer" class="nav-item">
             <img src="images/icons/profile.svg" alt="profile">
             <span>Profile</span>
           </a>
@@ -59,25 +60,28 @@
   </li>
   <li>
     <span class="bread_crumb-item">
-      <div>about us</div>
+      <div>a Page</div>
     </span>
   </li>
 </ul>
 <main>
-  <div id="about">
-    <h1>About us</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto expedita vitae odio, amet cumque in ipsa dolorem inventore dolore iure deleniti beatae, veritatis excepturi ex. Sint molestiae officia commodi ducimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto expedita vitae odio, amet cumque in ipsa dolorem inventore dolore iure deleniti beatae, veritatis excepturi ex. Sint molestiae officia commodi ducimus!
-    </p>
-    <img src="images/assets/pictures/the_team.jpg" alt="our team">
-    <div>
-      <p>
-        If you want to contact us our office is open form 08:00 to 16:00 CET.
-      </p>
-      <p>
-        for more information see our <a href="contact.html">contact page</a>
-      </p>
-    </div>
+  <div class="create-user">
+    <h1>Crate user</h1>
+    <h2>User information</h2>
+    <form action="" method="get" id="user-info" class="text-form">
+      <label for="username">username</label>
+      <input type="text" name="username" id="username">
+      <label for="email">email</label>
+      <input type="email" name="email" id="email">
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+      <label for="rep-pass">repeat password</label>
+      <input type="password" name="rep-pass" id="rep-pass">
+      <div>
+        <button>create account</button>
+        <button>cansel</button>
+      </div>
+    </form>
   </div>
 </main>
 <footer>

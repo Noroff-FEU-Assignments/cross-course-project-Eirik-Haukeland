@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/create-user.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/ico">
-  <title>Game Hub - about us</title>
+  <title>Game Hub - create user</title>
 </head>
 <header>
   <a href="index.html">
@@ -36,7 +37,7 @@
           </a>
         </li>
         <li>
-          <a href="create_user-account.html" rel="noopener noreferrer" class="nav-item">
+          <a href="profile.html" rel="noopener noreferrer" class="nav-item">
             <img src="images/icons/profile.svg" alt="profile">
             <span>Profile</span>
           </a>
@@ -59,25 +60,41 @@
   </li>
   <li>
     <span class="bread_crumb-item">
-      <div>about us</div>
+      <div>a Page</div>
     </span>
   </li>
 </ul>
 <main>
-  <div id="about">
-    <h1>About us</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto expedita vitae odio, amet cumque in ipsa dolorem inventore dolore iure deleniti beatae, veritatis excepturi ex. Sint molestiae officia commodi ducimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto expedita vitae odio, amet cumque in ipsa dolorem inventore dolore iure deleniti beatae, veritatis excepturi ex. Sint molestiae officia commodi ducimus!
-    </p>
-    <img src="images/assets/pictures/the_team.jpg" alt="our team">
-    <div>
-      <p>
-        If you want to contact us our office is open form 08:00 to 16:00 CET.
-      </p>
-      <p>
-        for more information see our <a href="contact.html">contact page</a>
-      </p>
-    </div>
+  <div class="create-user">
+    <h1>Crate user</h1>
+    <h2>payment information</h2>
+    <div class="payment">
+      <button>
+        <img src="images/icons/vipps_logo.svg" alt="logo for vipps">
+      </button>
+      <button>
+        <img src="images/icons/visa_logo.svg" alt="logo for visa">
+      </button>
+      <button>
+        <img src="images/icons/master-card_logo.svg" alt="logo for master card">
+      </button>
+      <button>
+        <img src="images/icons/paypal_logo.svg" alt="logo for paypal">
+      </button>
+      <form action="" method="get" id="">
+        <label for="card-numb">card number</label>
+        <input type="text" id="card-numb">
+        <label for="card-name">name on card</label>
+        <input type="text" id="card-name">
+        <label for="card-expiers">experation date</label>
+        <input type="text" id="card-expiers">
+        <label for="sec-code">security code</label>
+        <input type="text" id="sec-code">
+        <div>
+          <button>add payment</button>
+          <button>skip</button>
+        </div>
+      </form>
   </div>
 </main>
 <footer>
