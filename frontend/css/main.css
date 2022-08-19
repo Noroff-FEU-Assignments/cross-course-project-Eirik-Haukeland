@@ -189,7 +189,10 @@ a,
 span,
 input[type='text'],
 label,
-button {
+button,
+th,
+td,
+li {
   font-family: var(--font_style_sans);
   color: var(--text-color_dark);
 }

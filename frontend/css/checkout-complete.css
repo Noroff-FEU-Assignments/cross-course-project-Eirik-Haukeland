@@ -1,0 +1,163 @@
+@import url(checkout.css);
+
+main{
+  background-image: url('../images/icons/checkout-third-step.svg');
+}
+
+main > h1,
+h2 {
+  margin-block: 1em;
+}
+
+.complete {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em, 1fr;
+  align-content: center;
+}
+
+.complete > *:not(:last-child) {
+  grid-column: span 2;
+}
+
+.complete ul {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.complete ul,
+.complete p {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.carousel {
+  grid-column: span 2;
+  max-height: 100%;
+  display: grid;
+  grid-template: "left img rigth" auto / 1fr 2fr 1fr;
+  padding-block: 1em;
+  margin-inline: auto;
+  gap: 1em;
+}
+
+.carousel > button {
+  margin-block: 2.5em;
+  background: unset;
+  border: unset;
+}
+
+
+.carousel > #previus {
+  grid-area: left;
+}
+
+carousel > #next {
+  grid-area: right;
+}
+
+.carousel > button > img {
+  height: auto;
+  width: 3.5em;
+}
+
+.carousel > div {
+  grid-area: img;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.carousel > div > img {
+  max-width: 100%;
+}
+
+.carousel > div > img#top {
+  z-index: 3;
+  position: absolute;
+  top: -.75em;
+  right: .75em;
+}
+
+.carousel > div > img#middle {
+  z-index: 2;
+  position: absolute;
+}
+
+.carousel > div > img#bottom {
+  position: absolute;
+  z-index: 1;
+  top: .75em;
+  left: .75em;
+}
+
+.btn-div {
+  grid-column: span 2;
+}
+
+.btn {
+  margin-inline: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .complete ul,
+  .complete p {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .complete {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: unset;
+    width: 100%;
+    gap: 1em;
+  }
+
+  h2 {
+    margin: unset;
+  }
+
+  .complete > *:not(:last-child) {
+    grid-column: span 1;
+  }
+
+  .complete ul,
+  .complete p,
+  h2 {
+    width: 100%;
+    text-align: start;
+  }
+
+  .carousel {
+    width: 100%;
+    grid-row: span 3;
+    justify-self: self-start;
+    padding-block: unset;
+  }
+}
+
+@media only screen and (min-width: 914px)
+{
+  .complete {
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: unset;
+  }
+
+  .complete ul,
+  .complete p{
+    width: 11.75em;
+  }
+
+  .carousel > butten.next {
+    position: relative;
+    bottom: 3em;
+  }
+
+  .btn-div {
+    margin-top: 5em;
+  }
+}
