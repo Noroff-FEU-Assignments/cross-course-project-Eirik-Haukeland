@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/browse_games.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/ico">
   <meta name="description" content="browse computer games on Game Hub">
-  <script src="js/main.js" defer type="module"></script>
+  <script src="js/browse_game.js" defer type="module"></script>
   <title>Game Hub</title>
 </head>
 <header>
@@ -66,27 +67,27 @@
 </ul>
 <main>
   <form action="" method="get">
-    <label for="category"></label>
-    <select name="category" id="category"></select>
-    <label for="search_feld"></label>
-    <input type="text" class="search_feld">
+    <label class="hide" for="search_feld">name of game</label>
+    <input type="text" placeholder="game to search for" class="search_feld">
+    <div>
+      <label class="hide" for="category">category</label>
+      <select name="category" id="category">
+        <option selected value="all">select category</option>
+        <option value="online">online</option>
+        <option value="single player">single player</option>
+        <option value="multi player">multi player</option>
+        <option value="strategy">strategy</option>
+        <option value="role playing game">role playing game</option>
+        <option value="story rich">story rich</option>
+        <option value="horror">horror</option>
+        <option value="science fiction">science fiction</option>
+        <option value="fantasy">fantasy</option>
+        <option value="sport">sport</option>
+      </select>
+      <button id="search">search</button>
+    </div>
   </form>
-
-  <button id="test">text</button>
-  <section id="game_list" >
-    <hr>
-    <a class="game_card" href="browse_games.html" rel="noopener noreferrer">
-      <img src="images/assets/GameHub_covers_assassin.jpg" alt="cover to assassin">
-      <div>
-        <p class="game_card-title"><strong>Assassin</strong></p>
-        <p class="game_card-desc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <img class="game_card-stars" src="images/icons/stars_4-star-rank.svg" alt="one out of five stars">
-      </div>
-    </a>
-    <hr>
-  </section>
+  <section id="game_list" ></section>
 </main>
 <footer>
   <section>

@@ -76,33 +76,7 @@ main > div {
   flex-direction: column;
 }
 
-.btn-div > :first-child {
-  background-color: var(--back-ground_purpule-mid-high);
-}
-
-.btn-div > :first-child:hover {
-  background-color: var(--back-ground_purpule);
-}
-
-.btn-div > :not(:first-child) {
-  background-color: var(--back-ground_purpule-ligth);
-}
-
-.btn-div > :not(:first-child):hover {
-  background-color: var(--back-ground_purpule-medium);
-}
-
-.btn {
-  display: block;
-  height: 1.5rem;
-  width: 10em;
-  padding: .25rem;
-  text-align: center;
-  border-radius: .25rem;
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
-}
+@import url(btn.css);
 
 @media only screen and (min-width: 576px) {
   main {

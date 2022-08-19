@@ -224,7 +224,11 @@ li {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.25rem 0.5rem;
+  padding-block: 0.25rem;
+  padding-left: .5rem;
+  padding-right: unset;
+  margin-right: unset;
+  height: 7rem;
 }
 
 .game_card:hover {
@@ -232,28 +236,31 @@ li {
   border-radius: 0.5rem;
 }
 
-.game_card img {
-  max-width: 5rem;
+.game_card > img {
+  max-height: 100%;
+  width: auto;
   object-fit: contain;
 }
 
-.game_card div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
 .game_card-title {
+  width: 8em;
   font-family: var(--font_style_serif);
-  font-size: 1.2rem;
+  font-size: 1.2em;
+  margin-top: unset;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .game_card-desc {
-  width: 8rem;
+  width: 10em;
+  height: 4em;
+  overflow: hidden;
 }
 
 .game_card-stars {
-  width: 5rem;
+  height: 1.3rem;
+  width: 10rem;
 }
 
 footer {

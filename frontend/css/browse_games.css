@@ -1,0 +1,96 @@
+.hide {
+  position: fixed;
+  left: 200vw
+}
+
+main {
+  padding-inline: unset;
+}
+
+/* main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding-inline: unset;
+  column-gap: 0;
+  justify-items: center;
+} */
+
+main > form {
+  display: flex;
+  flex-direction: column;
+}
+
+main > form input[type='text'] {
+  background-color: var(--back-ground_yellow);
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  border: solid var(--text-color_dark);
+  text-align: center;
+  font-size: 1rem;
+}
+
+main > form input[type='text']:hover,
+main > form input[type='text']:focus {
+  outline: none;
+  background-color: var(--back-ground_yellow_on-hower);
+}
+
+main > form select,
+main > form button {
+  grid-row: 1 / 2;
+  border: 0;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+main > form select,
+main > form button {
+  background-color: var(--back-ground_purpule-mid-high);
+}
+
+main > form select:hover,
+main > form button:hover {
+  background-color: var(--back-ground_purpule);
+}
+
+/* main > form > div {
+  display: flex;
+} */
+
+#game_list {
+  /* grid-column: span 6; */
+  display: grid;
+  /* grid-template-columns: subgrid; */
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  gap: .5rem;
+}
+
+#game_list > a {
+  grid-column: span 6;
+}
+
+@media only screen and (min-width: 700px) {
+  main > form {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #game_list {
+    gap: 4rem
+  }
+
+  #game_list > a {
+    grid-column: span 3;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  #game_list {
+    gap: 3rem
+  }
+
+  #game_list > a {
+    grid-column: span 2;
+  }
+}

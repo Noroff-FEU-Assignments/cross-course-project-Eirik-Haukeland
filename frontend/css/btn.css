@@ -1,0 +1,26 @@
+.btn:first-of-type {
+  background-color: var(--back-ground_purpule-mid-high);
+}
+
+.btn:first-of-type:hover {
+  background-color: var(--back-ground_purpule);
+}
+
+.btn:not(:first-of-type) {
+  background-color: var(--back-ground_purpule-ligth);
+}
+
+.btn:not(:first-of-type):hover {
+  background-color: var(--back-ground_purpule-medium);
+}
+
+.btn {
+  display: block;
+  height: 1.5rem;
+  width: 10em;
+  padding: .25rem;
+  text-align: center;
+  border-radius: .25rem;
+  cursor: pointer;
+  text-decoration: none;
+}
