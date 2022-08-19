@@ -74,19 +74,19 @@ carousel > #next {
   max-width: 100%;
 }
 
-.carousel > div > img#top {
+.carousel > div > img.top {
   z-index: 3;
   position: absolute;
   top: -.75em;
   right: .75em;
 }
 
-.carousel > div > img#middle {
+.carousel > div > img.middle {
   z-index: 2;
   position: absolute;
 }
 
-.carousel > div > img#bottom {
+.carousel > div > img.bottom {
   position: absolute;
   z-index: 1;
   top: .75em;
