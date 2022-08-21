@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/browse_games.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <meta name="description" content="browse computer games on Game Hub">
+  <!-- <script src="js/browse_game.js" defer type="module"></script> -->
+  <title>Game Hub</title>
+</head>
+<header>
+  <a href="index.html">
+    <img class="logo" src="images/GameHub_Logo.png" alt="GameHub_Logo">
+  </a>
+  <div class="page-navigation">
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="index.html" rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/home.svg" alt="home">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="browse_games.html"  rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/games.svg" alt="games">
+            <span>Games</span>
+          </a>
+        </li>
+        <li>
+          <a href="order.html"  rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/shopping-cart.svg" alt="shopping cart">
+            <span>Order</span>
+          </a>
+        </li>
+        <li>
+          <a href="create_user-account.html"  rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/profile.svg" alt="profile">
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <form action="post">
+      <label for="search_box">search</label>
+      <input type="text" name="search_box" id="search_box">
+      <label for="search_btn">search</label>
+      <button id="search_btn"><img src="images/icons/search.svg" alt="search"></button>
+    </form>
+  </div>
+</header>
+<ul class="bread_crumbs">
+  <li>
+    <a class="bread_crumb-item" href="index.html">
+      <div>Home</div>
+    </a>
+  </li>
+  <li>
+    <span class="bread_crumb-item">
+      <div>Games</div>
+    </span>
+  </li>
+</ul>
+<main>
+  <form action="" method="get">
+    <label class="hide" for="search_feld">name of game</label>
+    <input type="text" placeholder="game to search for" class="search_feld">
+    <div>
+      <label class="hide" for="category">category</label>
+      <select name="category" id="category">
+        <option selected value="all">select category</option>
+        <option value="online">online</option>
+        <option value="single player">single player</option>
+        <option value="multi player">multi player</option>
+        <option value="strategy">strategy</option>
+        <option value="role playing game">role playing game</option>
+        <option value="story rich">story rich</option>
+        <option value="horror">horror</option>
+        <option value="science fiction">science fiction</option>
+        <option value="fantasy">fantasy</option>
+        <option value="sport">sport</option>
+      </select>
+      <button id="search">search</button>
+    </div>
+  </form>
+  <section id="game_list" >
+    <a href="black_game.html" id="2" class="game_card" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_black.jpg" alt="skeletal arms reaching to the moon with someone in hoody in forground">
+      <div>
+        <p class="game_card-title"><strong>Black</strong></p>
+        <p class="game_card-desc">The creature was half as tall as a man and moved crouched and close to the ground. Its nightmarish frame was gaunt and emaciated. Its body appeared to be covered in teeth growing out of its skin. It had 2 arms that were long and stick like. Two grotesque arms sprouted from its back like wings. Its face was skull like. Its mouth was filled with glowing teeth. It had a single bulging pastel green stock for an eye.</p>
+        <img class="game_card-stars" src="images/icons/stars_3-star-rank.svg" alt="3 out of 5 stars">
+      </div>
+    </a>
+    <a href="cyberpunk_game.html" id="9" class="game_card" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_cyberpunk.jpg" alt="purpule heeded woman whit a ligth saber like cleaver on a deep purpule background">
+      <div>
+        <p class="game_card-title"><strong>cyberpunk</strong></p>
+        <p class="game_card-desc">Ilaektra “Starchaser” Zal is the youngest Sergeant in the history of the Planetary Guard, and daughter of Titaen Zal, Commander of the airspace above Ki, and of all the Planetary Guard. She normally works routine shifts at the transfer center, supervising security of all transportation operations between Ki and it’s satellite, Ma. But her father recruits her for a mysterious mission that takes the two of them deep underground into the Guard headquarters and into a largely abandoned section he calls “The Arc Section.” When she realizes the mission is unsanctioned, she is hesitant, but her father explains to her that he has received information about “prepping” “control planet 13” and that he “isn’t going to let that happen.” When Ilaektra, who believes in the control planet experiments, asks him why, he informs her that in order to begin a new control planet, all previous life will be wiped, to which Ilaektra answers, “So?”</p>
+        <img class="game_card-stars" src="images/icons/stars_5-star-rank.svg" alt="5 out of 5 stars">
+      </div>
+    </a>
+    <a href="ping-pong-championchip_game.html" id="6" class="game_card" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_ping-pong-championship.jpg" alt="two red ping pong paddles and a white ping pong ball on a blue backgound">
+      <div>
+        <p class="game_card-title"><strong>ping pong championship</strong></p>
+        <p class="game_card-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem non expedita iure porro impedit eum, enim amet modi! Alias nam at deleniti cum soluta asperiores exercitationem. Optio mollitia ad cumque.</p>
+        <img class="game_card-stars" src="images/icons/stars_4-star-rank.svg" alt="4 out of 5 stars">
+      </div>
+    </a>
+  </section>
+</main>
+<footer>
+  <section>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <ul>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="browse_games.html">Games</a></li>
+    </ul>
+    <ul>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html">Order</a></li>
+    </ul>
+  </section>
+  <section>
+    <ul id="sosial_links">
+      <li><a href="twitter.com"><img src="images/icons/twitter-logo.svg" alt="twitter icon"></a></li>
+      <li><a href="mailto:mail@gamehub.com"><img src="images/icons/mail.svg" alt="mail icon"></a></li>
+      <li><a href="facebook.com"><img src="images/icons/facebook-logo.svg" alt="facebook icon"></a></li>
+    </ul>
+  </section>
+  <span>&copy copyright 2022</span>
+</footer>
+
+</html>
