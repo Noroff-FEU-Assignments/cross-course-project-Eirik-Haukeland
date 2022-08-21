@@ -1,14 +1,21 @@
 .payment {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 80%;
+  gap: .5rem;
 }
 
 .payment > button {
   background-color: var(--back-ground_purpule-ligth);
   border: none;
+  border-radius: .5rem;
   cursor: pointer;
-  margin-inline: auto;
+  width: 8rem;
+  height: 3rem;
+  justify-self: center;
+}
+
+.payment > button > img {
+  height: 3rem;
 }
 
 .payment > form {
@@ -68,6 +75,12 @@
 .payment > button:hover,
 .payment > form > div > button:not(:first-child):hover {
   background-color: var(--back-ground_purpule-medium);
+}
+
+@media only screen and (max-width: 850px) {
+  .payment > button{
+    grid-column: span 2;
+  }
 }
 
 @media only screen and (max-width: 600px) {

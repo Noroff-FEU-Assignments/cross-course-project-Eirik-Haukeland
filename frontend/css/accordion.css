@@ -1,6 +1,5 @@
 .accordion {
-  width: 85%;
-  margin: auto;
+  width: 100%;
   border: solid black 0.05rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -39,6 +38,7 @@
   display: flex;
   grid-column: span 6;
   justify-content: center;
+  padding: .5rem;
 }
 
 @media only screen and (max-width: 515px) {

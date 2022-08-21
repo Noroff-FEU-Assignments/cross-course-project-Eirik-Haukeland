@@ -6,3 +6,8 @@
 main{
   height: auto;
 }
+
+.hide {
+  position: fixed;
+  left: 100rem;
+}
