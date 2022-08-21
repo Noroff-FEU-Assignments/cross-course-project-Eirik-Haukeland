@@ -1,14 +1,16 @@
 .accordion {
   width: 85%;
-  margin-block: 2rem;
+  margin: auto;
   border: solid black 0.05rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 2.3em auto;
+  gap: unset;
 }
 
 .accordion > button {
   grid-row: 1 / 2;
+  grid-column: span 2;
   border: 0;
   border-bottom: solid black 0.05rem;
   padding: .5rem;
@@ -35,11 +37,9 @@
 .accordion > div {
   width: 100%;
   display: flex;
-  grid-column: span 3;
+  grid-column: span 6;
   justify-content: center;
 }
-
-
 
 @media only screen and (max-width: 515px) {
   main {
@@ -48,11 +48,11 @@
 
   .accordion {
     width: 100vw;
-    grid-template-columns: 1fr;
   }
   
   .accordion > button {
     grid-row: span 1;
+    grid-column: span 6;
     background-image: url(../images/icons/pointer.svg);
     background-repeat: no-repeat;
     background-position: 98%;
@@ -68,7 +68,7 @@
     display: flex;
     align-items: center;
     padding-block: 1rem;
-    grid-column: span 1;
+    grid-column: span 6;
   }
 }
 

@@ -1,5 +1,6 @@
 const currentUrl = window.location.href.split('/');
 currentUrl.pop();
+currentUrl.push('a_game.html');
 
 const makeGameCard = (obj) => {
   const card = document.createElement('a');

@@ -30,6 +30,8 @@ const accordion = () => {
   const buttons = [];
   const divs = [];
 
+  console.log('entered the accordion.js');
+
   arr.forEach((Element) => {
     if (Element.tagName === 'BUTTON') {
       buttons.push(Element);
