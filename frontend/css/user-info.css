@@ -31,6 +31,11 @@
   grid-column: 2;
 }
 
+.user-info > a {
+  grid-column: span 2;
+  justify-self: center;
+}
+
 @media only screen and (max-width: 580px) {
   .user-info{
     column-gap: .15rem;
