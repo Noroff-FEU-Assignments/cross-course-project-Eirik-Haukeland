@@ -22,7 +22,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 6.5rem;
+  gap: .5rem;
 }
 
 .p-and-btns > button {
@@ -30,7 +30,6 @@ main {
 }
 
 .p-and-btns .price {
-
   font-size: 2rem;
 }
 
@@ -192,7 +191,19 @@ height: 2rem;
     grid-column:span 3;
     grid-row: 2 / span 2;
     width: 100%;
+    height: 25.5rem;
+    justify-content: end;
+    margin: unset;
+    align-self: flex-start;
+  }
+
+  .accordion > div {
     height: 100%;
+    overflow: scroll !important;
+  }
+
+  .accordion .arc_content {
+    justify-content: start;
   }
 
   #stABl_info {
@@ -212,7 +223,6 @@ height: 2rem;
   .p-and-btns {
     height: unset;
     grid-column: span 3;
-    width: 23rem;
     flex-direction: row;
   }
 
