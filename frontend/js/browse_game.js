@@ -3,7 +3,7 @@ makeGameCard from './game_card.js';
 
 const imbedLocation = document.getElementById('game_list');
 
-fetch('http://gamehub.ebh.fyi/api/products')
+fetch('https://gamehub.ebh.fyi/api/products')
   .then((Response) => Response.json())
   .then((data) => {
     data.forEach((product) => {
