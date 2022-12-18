@@ -1,5 +1,4 @@
-import
-makeGameCard from './game_card.js';
+import makeGameCard from './game_card.js';
 
 const imbedLocation = document.getElementById('game_list');
 

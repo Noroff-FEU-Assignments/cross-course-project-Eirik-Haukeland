@@ -320,6 +320,12 @@ footer span {
   text-align: center;
 }
 
+.error {
+  border: .5rem solid red;
+  padding: .25rem;
+  color: red;
+}
+
 @media only screen and (min-width: 600px) {
   header img.logo {
     margin-right: 0.5rem;

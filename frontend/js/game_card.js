@@ -1,8 +1,8 @@
 const currentUrl = window.location.href.split('/');
-currentUrl.pop();
-currentUrl.push('a_game.html');
 
 const makeGameCard = (obj) => {
+  currentUrl.pop();
+  currentUrl.push(`a_game.html?id=${obj.id}`);
   const card = document.createElement('a');
   card.href = currentUrl.join('/');
   card.id = obj.id;
