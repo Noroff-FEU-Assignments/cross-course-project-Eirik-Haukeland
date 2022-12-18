@@ -25,10 +25,25 @@
 }
 
 .payment > form > input,
-.payment > form > label {
+.payment > form > label,
+form > span.message {
   grid-column: 2 / span 2;
   margin-block: 0.25rem;
   max-width: 100%;
+  border-radius: 0.25rem;
+}
+
+.payment > form > fieldset {
+  grid-column: 2 / span 2;
+  display: flex;
+  justify-content: space-evenly;
+  border: unset;
+  background-color: unset;
+  margin-block: 0.25rem;
+}
+
+.payment > form > fieldset > input {
+  width: 31%;
   border-radius: 0.25rem;
 }
 
@@ -36,15 +51,15 @@
   text-align: center;
 }
 
-.payment > form > input {
+.payment > form >> input {
   border: solid black 0.05rem;
-  background-color: var(--back-ground_yellow);
+  /* background-color: var(--back-ground_yellow); */
 }
 
-.payment > form > input:hover,
-.payment > form > input:focus {
+.payment > form >> input:hover,
+.payment > form >> input:focus {
   outline: none;
-  background-color: var(--back-ground_yellow_on-hower);
+  /* background-color: var(--back-ground_yellow_on-hower); */
 }
 
 .payment > form > div {
