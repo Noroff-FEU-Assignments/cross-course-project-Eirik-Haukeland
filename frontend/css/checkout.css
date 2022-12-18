@@ -56,6 +56,29 @@ main > div {
   justify-self: start;
 }
 
+.remove-product {
+  color: unset;
+  border: unset;
+  background: unset;
+  background: url(../images/icons/remove.svg) no-repeat;
+  height: 1.5rem;
+  width: auto;
+}
+
+.remove-product > span {
+  visibility: hidden;
+}
+
+tr > th:first-child {
+  grid-column: 1;
+}
+
+tr > :last-child {
+  grid-column: 2;
+  justify-self: end;
+  margin-left: .5rem;
+}
+
 /* .checkout-summery tr > th:first-child {
   padding-left: 3rem;
 } */
