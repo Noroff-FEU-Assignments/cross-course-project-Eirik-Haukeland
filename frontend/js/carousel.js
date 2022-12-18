@@ -1,36 +1,37 @@
 const preivus = document.querySelector('.carousel #preivus');
 const next = document.querySelector('.carousel #next');
-const img = document.querySelectorAll('.carousel > div > img');
 
-const moveDown = (arrOfImg) => {
-  arrOfImg.forEach((image) => {
-    if (image.classList.contains('top')) {
-      image.classList.remove('top');
-      image.classList.add('middle');
-    } else if (image.classList.contains('middle')) {
-      image.classList.remove('middle');
-      image.classList.add('bottom');
-    } else if (image.classList.contains('bottom')) {
-      image.classList.remove('bottom');
-      image.classList.add('top');
-    }
-  });
+const moveDown = () => {
+  const imgLocation = document.querySelector("#img_location");
+  const arrOfImg = [...imgLocation.childNodes];
+
+  const firstImg = arrOfImg.pop()
+  arrOfImg.splice(0, 0, firstImg)
+
+  imgLocation.childNodes.forEach(img => {
+    img.remove();
+  })
+  arrOfImg.forEach(img => {
+    imgLocation.appendChild(img);
+  })
 };
 
-const moveUp = (arrOfImg) => {
-  arrOfImg.forEach((image) => {
-    if (image.classList.contains('top')) {
-      image.classList.remove('top');
-      image.classList.add('bottom');
-    } else if (image.classList.contains('middle')) {
-      image.classList.remove('middle');
-      image.classList.add('top');
-    } else if (image.classList.contains('bottom')) {
-      image.classList.remove('bottom');
-      image.classList.add('middle');
-    }
-  });
+const moveUp = () => {
+  const imgLocation = document.querySelector("#img_location");
+  const arrOfImg = [...imgLocation.childNodes];
+
+  const firstImg = arrOfImg.shift()
+  arrOfImg.push(firstImg)
+
+  imgLocation.childNodes.forEach(img => {
+    img.remove();
+  })
+  arrOfImg.forEach(img => {
+    imgLocation.appendChild(img);
+  })
 };
 
-next.addEventListener('click', () => { moveUp(img); });
-preivus.addEventListener('click', () => { moveDown(img); });
+export default () => {
+  next.addEventListener('click', () => { moveUp(); });
+  preivus.addEventListener('click', () => { moveDown(); });
+}

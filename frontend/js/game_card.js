@@ -34,6 +34,10 @@ const makeGameCard = (obj) => {
   rating.alt = `${obj.stars_desc} out of 5 stars`;
   div.appendChild(rating);
 
+  const tags = obj.tags.join(", ");
+
+  card.setAttribute('data-tag', `${tags}`);
+
   card.appendChild(div);
 
   return card;

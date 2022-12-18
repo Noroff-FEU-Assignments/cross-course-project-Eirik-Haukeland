@@ -60,6 +60,7 @@ carousel > #next {
 .carousel > button > img {
   height: auto;
   width: 3.5em;
+  cursor: pointer;
 }
 
 .carousel > div {
@@ -74,21 +75,26 @@ carousel > #next {
   max-width: 100%;
 }
 
-.carousel > div > img.top {
-  z-index: 3;
+.carousel > div > img {
+  z-index: 1;
+  position: absolute;
+}
+
+.carousel > div > img:nth-child(1) {
+  z-index: 4;
   position: absolute;
   top: -.75em;
   right: .75em;
 }
 
-.carousel > div > img.middle {
-  z-index: 2;
+.carousel > div > img:nth-child(2) {
+  z-index: 3;
   position: absolute;
 }
 
-.carousel > div > img.bottom {
+.carousel > div > img:nth-child(3) {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: .75em;
   left: .75em;
 }

@@ -92,6 +92,10 @@ form > span.message {
   background-color: var(--back-ground_purpule-medium);
 }
 
+#debit-error {
+  grid-column: 2 / span 2;
+}
+
 @media only screen and (max-width: 850px) {
   .payment > button{
     grid-column: span 2;

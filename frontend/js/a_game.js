@@ -41,8 +41,7 @@ fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
     `
     const toCart = document.getElementById("to-cart");
     toCart.addEventListener("click", (evt) => {
-      let shoppingList
-      if (isThereLocalstorage()){      
+      let shoppingList    
         if (localStorage.getItem("cart") !== null) {
           shoppingList = [...JSON.parse(localStorage.getItem("cart"))];
           if (!shoppingList.includes(product.id)) {
@@ -52,20 +51,7 @@ fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
           shoppingList = [product.id]
         }
         localStorage.setItem("cart", JSON.stringify(shoppingList))
-      } else {
-        let shoppingList
-        if (isThereLocalstorage()){      
-          if (sessionStorage.getItem("cart") !== null) {
-            shoppingList = [...JSON.parse(sessionStorage.getItem("cart"))];
-            if (!shoppingList.includes(product.id)) {
-              shoppingList.push(product.id)
-            }
-          } else {
-            shoppingList = [product.id]
-          }
-          sessionStorage.setItem("cart", JSON.stringify(shoppingList))
-      }
-    }})
+    })
 
     const localAccordion = document.createElement('section');
     localAccordion.classList = 'accordion';

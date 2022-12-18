@@ -8,13 +8,10 @@ const makeCommentCard = (comment) => {
 
   const commentImg = document.createElement('img');
   // eslint-disable-next-line no-undef, space-infix-ops
-  // commentImg.src = comment.profile-picture;
+  // commentImg.src = comment.["profile-picture"];
   commentImg.alt = `${comment.name}'s profile picture`;
   message.appendChild(commentImg);
 
-  // const commentMessage = document.createElement('p');
-  // commentMessage.textContent = comment.message;
-  // message.appendChild(commentMessage);
   message.innerHTML += `<p><strong><q>${comment.message}</q></strong>
   </p>`
 

@@ -70,6 +70,10 @@ main > form button:hover {
   grid-column: span 6;
 }
 
+#game_list > a[hidden] {
+  display: none;
+}
+
 @media only screen and (min-width: 700px) {
   main > form {
     flex-direction: row;

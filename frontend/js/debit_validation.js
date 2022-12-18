@@ -20,6 +20,36 @@ const hasSiblingWithId = (element, testId) => {
   }
 }
 
+const errorMessage = (elementName, id, message) => {
+  console.log(elementName)
+  let errorMessage = makeMessage(["error"])
+  errorMessage.innerText = message
+  errorMessage.id = `${id}-error`
+  elementName.insertAdjacentElement("afterend", errorMessage);
+}
+
+const form = document.getElementById("debit")
+
+form.addEventListener("submit", (evt) => {
+  for (let i = 0; i < evt.target.childNodes.length; i += 1) {
+    let input = evt.target.childNodes[i]
+    if (input.nodeName === "INPUT" && input.value === "" && hasSiblingWithId(evt.target, `${evt.target.id}-error`).YorN === false) {
+      errorMessage(evt.target, evt.target.id, "please fill inn empty feelds")
+    } else if (input.nodeName === "FIELDSET" && hasSiblingWithId(evt.target, `${evt.target.id}-error`).YorN === false) {
+      input.childNodes.forEach((fieldInput) => {
+        if (fieldInput.value === "" ) {
+          errorMessage(evt.target, evt.target.id, "please fill inn empty feelds")
+        }
+      })
+    }
+  }
+  const paymetdiv = document.querySelector('.payment')
+  const errmsg = paymetdiv.querySelector('.error')
+  if (errmsg) {
+    evt.preventDefault();
+  } 
+})
+
 const setUpEvents = (id, RegExp, message) => {
   const elementName = document.querySelector(`#${id}`);
   
@@ -37,6 +67,29 @@ const setUpEvents = (id, RegExp, message) => {
     if (RegExp.test(evt.target.value) && elementNameError.YorN === true) {
       elementNameError.element.remove();
     }
+    const form = document.getElementById("debit")
+    const isThereError = [...form.querySelectorAll('input')].filter(item => item.value !== "")
+    
+    if (isThereError.length === 6) {
+        const elementNameError = hasSiblingWithId(form, `${form.id}-error`);
+        elementNameError.element.remove();  
+    }
+    console.log(isThereError)
+
+    // for (let i = 0; i < form.childNodes.length; i += 1) {
+    //   let input = form.childNodes[i]
+    //   const elementNameError = hasSiblingWithId(form, `${form.id}-error`);
+    //   console.log(elementNameError)
+    //   if (input.nodeName === "INPUT" /*&& input.value !== ""*/ && elementNameError.YorN === true) {
+    //     elementNameError.element.remove();
+    //   } /*else if (input.nodeName === "FIELDSET" && hasSiblingWithId(form, `${form.id}-error`).YorN === true) {
+    //     input.childNodes.forEach((fieldInput) => {
+    //       if (fieldInput.value !== "" ) {
+    //         elementNameError.element.remove();
+    //       }
+    //     })
+    //   }*/
+    // }
   })
 }
 

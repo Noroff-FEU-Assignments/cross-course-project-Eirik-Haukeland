@@ -45,7 +45,7 @@
     <button>
       <img src="images/icons/paypal_logo.svg" alt="logo for paypal">
     </button>
-    <form action="" method="get" id="form-debit-card">
+    <form action="./order_complete.html" method="get" id="debit">
       <label for="card-numb">card number</label>
       <input type="text" id="card-numb">
       <label for="card-name">name on card</label>
@@ -59,7 +59,7 @@
       <label for="sec-code">security code</label>
       <input type="text" id="sec-code">
       <div class="btn-div">
-        <a href="order_complete.html" class="btn">add payment</a>
+        <button type="submit" id="add-payment-submit" class="btn">add payment</button>
         <a href="index.html" class="btn">cansel</a>
       </div>
     </form>
