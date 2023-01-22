@@ -7,7 +7,7 @@ const buttonSkip = document.getElementById('skip-add-payment');
 const currentUrl = window.location.href.split('/');
 currentUrl.pop();
 
-shoppingCartOnLoad()
+shoppingCartOnLoad();
 
 const makeMessage = (classList) => {
   classList.push("message")

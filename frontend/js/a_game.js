@@ -1,15 +1,15 @@
 import accordion from './accordion.js';
 import makeCommentCard from './comment_card.js';
 import isThereLocalstorage from './isThereLocalstorage.js';
-import {starRating} from "./woocommers_helpers.js";
-/*import shoppingCartOnLoad from './shoppingCartOnLoad.js';
+import { starRating } from './woocommers_helpers.js';
+import shoppingCartOnLoad from './shoppingCartOnLoad.js';
 
-shoppingCartOnLoad()*/
+shoppingCartOnLoad();
 // import makeGameCard from './game_card.js'; //todo: enable related games
 
 const imbedLocation = document.getElementById('game_location');
 const lastCrumb = document.getElementById('last-crumb');
-const pageTitle = document.querySelector("title");
+const pageTitle = document.querySelector('title');
 const pageDescription = document.querySelector('meta[name="description"]');
 
 // having problems whit how to get id whil just use a hard coded one
@@ -19,8 +19,8 @@ const id = searchParams.get('id');
 
 // fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
 fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
-    .then((Response) => Response.json())
-    .then((item) => {
+  .then((Response) => Response.json())
+  .then((item) => {
     const product = item[0];
     lastCrumb.innerText = product.name;
     pageTitle.innerText = `Game Hub - ${product.name}`;
@@ -35,60 +35,60 @@ fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
     cover.alt = product.images[0].alt;
     imbedLocation.appendChild(cover);
 
-    // const userLib = JSON.parse(localStorage.getItem("userLib"));
-    // const cart = JSON.parse(localStorage.getItem("cart"));
-    //
-    // if (cart.includes(id)) {
-    //   imbedLocation.innerHTML += `
-    //   <div class="p-and-btns">
-    //     <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
-    //     <button class="btn" id="to-cart" disabled>added to Cart</button>
-    //     <button class="btn" id="to-wish">add to wishlist</button>
-    //   </div>
-    // `;
-    // } else if (userLib.includes(id)) {
-    //   imbedLocation.innerHTML += `
-    //   <div class="p-and-btns">
-    //     <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
-    //     <button class="btn" id="owned">play ${product.name}</button>
-    //     <button class="btn" id="sell-item">sell game</button>
-    //   </div>
-    // `;
-    // } else {
-    imbedLocation.innerHTML += `
+    const userLib = JSON.parse(localStorage.getItem('userLib'));
+    const cart = JSON.parse(localStorage.getItem('cart'));
+
+    if (cart.includes(id)) {
+      imbedLocation.innerHTML += `
+      <div class="p-and-btns">
+        <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
+        <button class="btn" id="to-cart" disabled>added to Cart</button>
+        <button class="btn" id="to-wish">add to wishlist</button>
+      </div>
+    `;
+    } else if (userLib.includes(id)) {
+      imbedLocation.innerHTML += `
+      <div class="p-and-btns">
+        <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
+        <button class="btn" id="owned">play ${product.name}</button>
+        <button class="btn" id="sell-item">sell game</button>
+      </div>
+    `;
+    } else {
+      imbedLocation.innerHTML += `
       <div class="p-and-btns">
         <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
         <button class="btn" id="to-cart">add to Cart</button>
         <button class="btn" id="to-wish">add to wishlist</button>
       </div>
     `;
-    // }
+    }
 
-    const owned = document.getElementById("owned");
+    const owned = document.getElementById('owned');
     if (owned !== null) {
-      owned.addEventListener("click", () => {
-        window.open("https://tetris.com/play-tetris", "_blank");
+      owned.addEventListener('click', () => {
+        window.open('https://tetris.com/play-tetris', '_blank');
       });
     }
 
-    const toCart = document.getElementById("to-cart");
+    const toCart = document.getElementById('to-cart');
     if (toCart !== null) {
-      toCart.addEventListener("click", (evt) => {
-        let shoppingList    
-          if (localStorage.getItem("cart") !== null) {
-            shoppingList = [...JSON.parse(localStorage.getItem("cart"))];
-            if (!shoppingList.includes(product.id)) {
-              shoppingList.push(product.id);
-            }
-          } else {
-            shoppingList = [product.id];
+      toCart.addEventListener('click', (evt) => {
+        let shoppingList;
+        if (localStorage.getItem('cart') !== null) {
+          shoppingList = [...JSON.parse(localStorage.getItem('cart'))];
+          if (!shoppingList.includes(product.id)) {
+            shoppingList.push(product.id);
           }
-          localStorage.setItem("cart", JSON.stringify(shoppingList))
-          toCart.disabled = true;
-          toCart.innerText = "added to Cart";
-          const shoppingCartAmount = document.querySelector("#main-nav").querySelector("#items-in-cart");
-          shoppingCartAmount.innerText = Number(shoppingCartAmount.innerText) + 1;
-          shoppingCartAmount.hidden = false;
+        } else {
+          shoppingList = [product.id];
+        }
+        localStorage.setItem('cart', JSON.stringify(shoppingList));
+        toCart.disabled = true;
+        toCart.innerText = 'added to Cart';
+        const shoppingCartAmount = document.querySelector('#main-nav').querySelector('#items-in-cart');
+        shoppingCartAmount.innerText = Number(shoppingCartAmount.innerText) + 1;
+        shoppingCartAmount.hidden = false;
       });
     }
 
@@ -105,8 +105,8 @@ fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
     storyABlurbDiv.id = 'storyABlurb_div';
 
     const stABl_info = document.createElement('div');
-    stABl_info.id = "stABl_info";
-    stABl_info.classList.add("arc_content");
+    stABl_info.id = 'stABl_info';
+    stABl_info.classList.add('arc_content');
 
     const rating = document.createElement('img');
     rating.classList = 'game_card-stars';
@@ -161,12 +161,12 @@ fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
     localAccordion.appendChild(systemReqDiv);
     imbedLocation.appendChild(localAccordion);
 
-  // const comments = document.createElement('section');
-  // comments.classList.add("comments");
-  // product.comments.forEach((comment) => {
-  //   comments.appendChild(makeCommentCard(comment));
-  // });
-  // imbedLocation.appendChild(comments);
+    // const comments = document.createElement('section');
+    // comments.classList.add("comments");
+    // product.comments.forEach((comment) => {
+    //   comments.appendChild(makeCommentCard(comment));
+    // });
+    // imbedLocation.appendChild(comments);
 
     imbedLocation.innerHTML += `
     <section class="comments">
@@ -184,22 +184,22 @@ fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
     </section>
     `;
 
-  // todo: make a propper one
-  // const relatedGames = [];
+    // todo: make a propper one
+    // const relatedGames = [];
 
-  // product.tags.forEach((tag) => {
-  //   fetch('https://gamehub.ebh.fyi/api/products')
-  //     .then((Response) => Response.json())
-  //     .then((Objects) => {
-  //       Objects.forEach((item) => {
-  //         if (item.tags.includes(tag)) {
-  //           relatedGames.add(item);
-  //         }
-  //       });
-  //     });
-  // });
+    // product.tags.forEach((tag) => {
+    //   fetch('https://gamehub.ebh.fyi/api/products')
+    //     .then((Response) => Response.json())
+    //     .then((Objects) => {
+    //       Objects.forEach((item) => {
+    //         if (item.tags.includes(tag)) {
+    //           relatedGames.add(item);
+    //         }
+    //       });
+    //     });
+    // });
 
-  // console.log(relatedGames);
+    // console.log(relatedGames);
 
   // imbedLocation.appendChild(makeGameCard());
-}).then(() => accordion());
+  }).then(() => accordion());
