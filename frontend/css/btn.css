@@ -24,3 +24,9 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.btn:disabled,
+.btn:disabled:hover {
+  background-color: gray;
+  color: white;
+}

@@ -1,57 +1,95 @@
 import accordion from './accordion.js';
 import makeCommentCard from './comment_card.js';
 import isThereLocalstorage from './isThereLocalstorage.js';
+/*import shoppingCartOnLoad from './shoppingCartOnLoad.js';
 
+shoppingCartOnLoad()*/
 // import makeGameCard from './game_card.js'; //todo: enable related games
 
 const imbedLocation = document.getElementById('game_location');
-const lastCrumb = document.getElementById('last-crumb')
-const pageTitle = document.querySelector("title")
-const pageDescription = document.querySelector('meta[name="description"]')
-
-console.log(imbedLocation.childNodes);
+const lastCrumb = document.getElementById('last-crumb');
+const pageTitle = document.querySelector("title");
+const pageDescription = document.querySelector('meta[name="description"]');
 
 // having problems whit how to get id whil just use a hard coded one
 
-const searchParams = new URLSearchParams(window.location.search)
-const id = searchParams.get("id")
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('id');
 
-fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
+// fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
+fetch(`http://172.104.247.248:9090/wp-json/wc/store/products/?include=${id}`)
 .then((Response) => Response.json())
-.then((product) => {
-    lastCrumb.innerText = product.title;
-    pageTitle.innerText = `Game Hub - ${product.title}`;
-    pageDescription.innerText = `product page for ${product.title}`
-  
+.then((item) => {
+    const product = item[0];
+    lastCrumb.innerText = product.name;
+    pageTitle.innerText = `Game Hub - ${product.name}`;
+    pageDescription.innerText = `product page for ${product.name}`;
+
     const title = document.createElement('h1');
-    title.textContent = product.title;
+    title.textContent = product.name;
     imbedLocation.appendChild(title);
 
     const cover = document.createElement('img');
-    cover.src = product.image;
-    cover.alt = product.image_desc;
+    cover.src = product.images[0].src;
+    cover.alt = product.images[0].alt;
     imbedLocation.appendChild(cover);
 
-    imbedLocation.innerHTML += `
-      <div class="p-and-btns">
-        <p class="price">${product.prise} kr</p>
-        <button class="btn" id="to-cart">add to Cart</button>
-        <button class="btn" id="to-wish>add to wishlist</button>
-      </div>
-    `
+    // const userLib = JSON.parse(localStorage.getItem("userLib"));
+    // const cart = JSON.parse(localStorage.getItem("cart"));
+    //
+    // if (cart.includes(id)) {
+    //   imbedLocation.innerHTML += `
+    //   <div class="p-and-btns">
+    //     <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
+    //     <button class="btn" id="to-cart" disabled>added to Cart</button>
+    //     <button class="btn" id="to-wish">add to wishlist</button>
+    //   </div>
+    // `;
+    // } else if (userLib.includes(id)) {
+    //   imbedLocation.innerHTML += `
+    //   <div class="p-and-btns">
+    //     <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
+    //     <button class="btn" id="owned">play ${product.name}</button>
+    //     <button class="btn" id="sell-item">sell game</button>
+    //   </div>
+    // `;
+    // } else {
+      imbedLocation.innerHTML += `
+        <div class="p-and-btns">
+          <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
+          <button class="btn" id="to-cart">add to Cart</button>
+          <button class="btn" id="to-wish">add to wishlist</button>
+        </div>
+      `;
+    // }
+
+    const owned = document.getElementById("owned");
+    if (owned !== null) {
+      owned.addEventListener("click", () => {
+        window.open("https://tetris.com/play-tetris", "_blank");
+      });
+    }
+
     const toCart = document.getElementById("to-cart");
-    toCart.addEventListener("click", (evt) => {
-      let shoppingList    
-        if (localStorage.getItem("cart") !== null) {
-          shoppingList = [...JSON.parse(localStorage.getItem("cart"))];
-          if (!shoppingList.includes(product.id)) {
-            shoppingList.push(product.id)
+    if (toCart !== null) {
+      toCart.addEventListener("click", (evt) => {
+        let shoppingList    
+          if (localStorage.getItem("cart") !== null) {
+            shoppingList = [...JSON.parse(localStorage.getItem("cart"))];
+            if (!shoppingList.includes(product.id)) {
+              shoppingList.push(product.id);
+            }
+          } else {
+            shoppingList = [product.id];
           }
-        } else {
-          shoppingList = [product.id]
-        }
-        localStorage.setItem("cart", JSON.stringify(shoppingList))
-    })
+          localStorage.setItem("cart", JSON.stringify(shoppingList))
+          toCart.disabled = true;
+          toCart.innerText = "added to Cart";
+          const shoppingCartAmount = document.querySelector("#main-nav").querySelector("#items-in-cart");
+          shoppingCartAmount.innerText = Number(shoppingCartAmount.innerText) + 1;
+          shoppingCartAmount.hidden = false;
+      });
+    }
 
     const localAccordion = document.createElement('section');
     localAccordion.classList = 'accordion';
@@ -77,7 +115,7 @@ fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
 
     const desc = document.createElement('p');
     desc.classList = 'game_card-desc';
-    desc.textContent = product.desc;
+    desc.innerHTML = product.description;
     stABl_info.appendChild(desc);
 
     storyABlurbDiv.appendChild(stABl_info);
@@ -117,17 +155,33 @@ fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
           </tr>
         </tbody>
       </table>
-    </div>`
+    </div>`;
 
     localAccordion.appendChild(systemReqDiv);
     imbedLocation.appendChild(localAccordion);
 
-  const comments = document.createElement('section');
-  comments.classList.add("comments")
-  product.comments.forEach((comment) => {
-    comments.appendChild(makeCommentCard(comment));
-  });
-  imbedLocation.appendChild(comments);
+  // const comments = document.createElement('section');
+  // comments.classList.add("comments");
+  // product.comments.forEach((comment) => {
+  //   comments.appendChild(makeCommentCard(comment));
+  // });
+  // imbedLocation.appendChild(comments);
+
+    imbedLocation.innerHTML += `
+    <section class="comments">
+      <div class="revue_card">
+        <img src="images/profile_pictures/clarise-starling_croped-300*300.jpg" alt="image of Calrise Starling">
+        <span>Clarise Startling</span>
+        <p><strong><q>If he think's of you as his enemy, maybe we'd have better luck if I went in by my self</q></strong>
+        </p>
+      </div>
+      <div class="revue_card">
+        <img src="images/profile_pictures/james-bond-nr.4_croped-300*300.jpg" alt="image go james bond the fourth">
+        <span>james bond the fourth</span>
+        <p><strong><q>007 here. I'll report in an hour. ... Better make that two</q></strong></p>
+      </div>
+    </section>
+    `;
 
   // todo: make a propper one
   // const relatedGames = [];
@@ -147,6 +201,5 @@ fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
   // console.log(relatedGames);
 
   // imbedLocation.appendChild(makeGameCard());
-  
 })
 .then(() => accordion());

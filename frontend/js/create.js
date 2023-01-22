@@ -1,9 +1,13 @@
+import shoppingCartOnLoad from "./shoppingCartOnLoad";
+
 const buttonPayment = document.getElementById('create-payment-submit');
 const buttonAccount = document.getElementById('create-account-submit');
 const buttonCansel = document.getElementById('cansel-account-create');
 const buttonSkip = document.getElementById('skip-add-payment');
 const currentUrl = window.location.href.split('/');
 currentUrl.pop();
+
+shoppingCartOnLoad()
 
 const makeMessage = (classList) => {
   classList.push("message")

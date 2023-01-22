@@ -105,7 +105,17 @@ header img.logo {
   max-height: 1rem;
 }
 
-.nav-item span,
+#items-in-cart {
+  border-radius: 50%;
+  background-color: green;
+  color: wheat;
+  height: auto;
+  width: 1rem;
+  text-align: center;
+  font-size: .75rem;
+}
+
+.nav-item span:not(#items-in-cart),
 .page-navigation label,
 main section h2 {
   position: absolute;
@@ -186,7 +196,7 @@ h2 {
 
 p,
 a,
-span,
+span:not(#items-in-cart),
 input[type='text'],
 label,
 button,
@@ -331,12 +341,17 @@ footer span {
     margin-right: 0.5rem;
   }
 
-  .nav-item span {
+  .nav-item span:not(#items-in-cart) {
     position: static;
   }
 
   .bread_crumb-item div {
     font-size: 1rem;
+  }
+
+  #items-in-cart:not([hidden]) {
+    font-size: medium;
+    width: 1.5rem;
   }
 
   main section:not(:nth-of-type(1)) {

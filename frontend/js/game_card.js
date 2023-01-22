@@ -10,8 +10,8 @@ const makeGameCard = (obj) => {
   card.relList = 'noopener noreferrer';
 
   const cover = document.createElement('img');
-  cover.src = obj.image;
-  cover.alt = obj.image_desc;
+  cover.src = obj.images[0].src;
+  cover.alt = obj.images[0].alt;
   card.appendChild(cover);
 
   const div = document.createElement('div');
@@ -19,22 +19,22 @@ const makeGameCard = (obj) => {
   const title = document.createElement('p');
   title.classList = 'game_card-title';
   const titleText = document.createElement('strong');
-  titleText.textContent = obj.title;
+  titleText.textContent = obj.name;
   title.appendChild(titleText);
   div.appendChild(title);
 
   const desc = document.createElement('p');
   desc.classList = 'game_card-desc';
-  desc.textContent = obj.desc;
+  desc.textContent = obj.description;
   div.appendChild(desc);
 
   const rating = document.createElement('img');
   rating.classList = 'game_card-stars';
   rating.src = obj.stars_img;
-  rating.alt = `${obj.stars_desc} out of 5 stars`;
+  rating.alt = `${obj.average_rating.charAt(0)} out of 5 stars`;
   div.appendChild(rating);
 
-  const tags = obj.tags.join(", ");
+  const tags = obj.categories.map((tag) => tag.name).join(', ');
 
   card.setAttribute('data-tag', `${tags}`);
 
