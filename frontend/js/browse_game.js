@@ -5,7 +5,7 @@ shoppingCartOnLoad();*/
 
 const imbedLocation = document.getElementById('game_list');
 
-fetch('http://172.104.247.248:9090/wp-json/wc/store/products')
+fetch('https://gamehub.ebh.fyiwp-json/wc/store/products')
   .then((Response) => Response.json())
   .then((data) => {
     data.forEach((product) => {

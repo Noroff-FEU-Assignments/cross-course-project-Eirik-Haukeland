@@ -17,7 +17,7 @@ const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
 
 // fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
-fetch(`http://172.104.247.248:9090/wp-json/wc/store/products/?include=${id}`)
+fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
 .then((Response) => Response.json())
 .then((item) => {
     const product = item[0];
@@ -54,13 +54,13 @@ fetch(`http://172.104.247.248:9090/wp-json/wc/store/products/?include=${id}`)
     //   </div>
     // `;
     // } else {
-      imbedLocation.innerHTML += `
-        <div class="p-and-btns">
-          <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
-          <button class="btn" id="to-cart">add to Cart</button>
-          <button class="btn" id="to-wish">add to wishlist</button>
-        </div>
-      `;
+    imbedLocation.innerHTML += `
+      <div class="p-and-btns">
+        <p class="price">${product.prices.price} ${product.prices.currency_symbol}</p>
+        <button class="btn" id="to-cart">add to Cart</button>
+        <button class="btn" id="to-wish">add to wishlist</button>
+      </div>
+    `;
     // }
 
     const owned = document.getElementById("owned");
