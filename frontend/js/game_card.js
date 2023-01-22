@@ -1,3 +1,5 @@
+import {starRating} from "./woocommers_helpers.js";
+
 const currentUrl = window.location.href.split('/');
 
 const makeGameCard = (obj) => {
@@ -25,12 +27,12 @@ const makeGameCard = (obj) => {
 
   const desc = document.createElement('p');
   desc.classList = 'game_card-desc';
-  desc.textContent = obj.description;
+  desc.innerHTML = obj.description;
   div.appendChild(desc);
 
   const rating = document.createElement('img');
   rating.classList = 'game_card-stars';
-  rating.src = obj.stars_img;
+  rating.src = starRating(obj.average_rating);;
   rating.alt = `${obj.average_rating.charAt(0)} out of 5 stars`;
   div.appendChild(rating);
 

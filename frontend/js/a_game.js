@@ -1,6 +1,7 @@
 import accordion from './accordion.js';
 import makeCommentCard from './comment_card.js';
 import isThereLocalstorage from './isThereLocalstorage.js';
+import {starRating} from "./woocommers_helpers.js";
 /*import shoppingCartOnLoad from './shoppingCartOnLoad.js';
 
 shoppingCartOnLoad()*/
@@ -18,8 +19,8 @@ const id = searchParams.get('id');
 
 // fetch(`https://gamehub.ebh.fyi/api/product/${id}`)
 fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
-.then((Response) => Response.json())
-.then((item) => {
+    .then((Response) => Response.json())
+    .then((item) => {
     const product = item[0];
     lastCrumb.innerText = product.name;
     pageTitle.innerText = `Game Hub - ${product.name}`;
@@ -109,8 +110,8 @@ fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
 
     const rating = document.createElement('img');
     rating.classList = 'game_card-stars';
-    rating.src = product.stars_img;
-    rating.alt = `${product.stars_desc} out of 5 stars`;
+    rating.src = starRating(product.average_rating);
+    rating.alt = `${product.average_rating.charAt(0)} out of 5 stars`;
     stABl_info.appendChild(rating);
 
     const desc = document.createElement('p');
@@ -201,5 +202,4 @@ fetch(`https://gamehub.ebh.fyi/wp-json/wc/store/products/?include=${id}`)
   // console.log(relatedGames);
 
   // imbedLocation.appendChild(makeGameCard());
-})
-.then(() => accordion());
+}).then(() => accordion());
