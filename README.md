@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6cadece7-376e-4ed3-8df7-01112636b75b/deploy-status)](https://app.netlify.com/sites/joyful-halva-a4d44f/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6cadece7-376e-4ed3-8df7-01112636b75b/deploy-status)](https://app.netlify.com/sites/fantastic-pegasus-1d8ebd/deploys)
 
 # [README: cross course project](https://github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland)
 by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
