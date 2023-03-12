@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cadece7-376e-4ed3-8df7-01112636b75b/deploy-status)](https://app.netlify.com/sites/fantastic-pegasus-1d8ebd/deploys)
 
-# [README: cross course project](https://github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland)
+# [README: Cross Course Project](https://github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland)
 by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
 
 This is the code for the front end of my food blog
@@ -9,69 +9,69 @@ This is the code for the front end of my food blog
 - Html
 - Css
 - JavaScript
-- cms (WordPress)
+- CMS (WordPress)
 
-## get the code
+## Get the code
 
-### with gh cli tool
-you need to download gh cli tool [look here for information](https://github.com/cli/cli#installation)
+### With gh cli tool
+You need to download gh cli tool [look here for information](https://github.com/cli/cli#installation)
 
 Fork the repo:
 ``` shell
   $ gh repo fork git@github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland
 ```
 
-### with standard git cli
-you need to download git cli tool [look here for information](https://git-scm.com/downloads)
+### With standard git cli
+You need to download git cli tool [look here for information](https://git-scm.com/downloads)
 
-clone the repo:
+Clone the repo:
 ``` shell
   $ git clone git@github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland
 ```
 
-check the current remote:
+Check the current remote:
 ``` shell
   $ git remote -v
 ```
 
-set the new remote:
+Set the new remote:
 ``` shell
   $ git remote set-url origin http://newserver/myproject.git 
 ```
 
-verify that the remote has been sett properly:
+Verify that the remote has been sett properly:
 ``` shell
   $ git remote -v
 ```
 
-push to new repo:
+Push to new repo:
 ```shell
   $ git push origin master
 ```
 
-## hosing the front end
-once you have the repo you will need to sett up the web host:
+## Hosing the front end
+Once you have the repo you will need to sett up the web host:
 
-you might use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site),
+You might use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site),
 Netlify [se here](https://docs.netlify.com/get-started/), or
 sett your own web server.
 
-be sure to set the frontend folder to the root folder
+Be sure to set the frontend folder to the root folder
 of the web page
 
-## setup cms whit docker
+## Setup cms whit docker
 I used WordPress with the "WooCommerce" plugin
 
-you will need a sql database like [mariadb](https://hub.docker.com/_/mariadb)
+You will need a sql database like [mariadb](https://hub.docker.com/_/mariadb)
 or [mysql](https://hub.docker.com/_/mysql) then you will
 need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
 
-### set up the network for your container
+### Set up the network for your container
 ```shell
   $ docker network create [name-of-network]
 ```
 
-### set up the database (here we are using mariadb)
+### Set up the database (here we are using mariadb)
 ```shell
   $ mkdir [path/to/db]
 
@@ -88,7 +88,7 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
 ```
 
 
-### set up the WordPress
+### Setup the WordPress
 ```shell
   $ mkdir [path/to/wordpress]
   
@@ -102,28 +102,28 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
 ```
 
 ### WordPress connecting to the database
-when setting up the database:
+When setting up the database:
 - set database name to the value from MARIADB_DATABASE (from the db setup)
 - set username to the value from MARIADB_USER (from the db setup)
 - set password to the value from MARIADB_PASSWORD (from the db setup)
 - set database host to the value from name (from the db setup)
 
-### adding WooCommerce plugin
-- go to plugins tab
-- click on "Add New"
-- search for "WooCommerce"
-- click "install now" and then "activate"
-- go through the setup
-- afterwords you can go to the "products" tab and add you 
+### Adding WooCommerce plugin
+- Go to plugins tab
+- Click on "Add New"
+- Search for "WooCommerce"
+- Click "install now" and then "activate"
+- Go through the setup
+- Afterwords you can go to the "products" tab and add you 
 products
 
-### setting links
-you need to do this so that you can accsess the wordpress rest-api
-- go to permalinks in the settings menu
-- change "Permalink structure" to "Day and name" (https://example.com/YYYY/MM/DD/sample-post/)
+### Setting permalinks
+You need to do this so that you can accsess the wordpress rest-api
+- Go to permalinks in the settings menu
+- Change "Permalink structure" to "Day and name" (https://example.com/YYYY/MM/DD/sample-post/)
 
-### change to code
-change the urls of the fetch request on
+### Change to code
+Change the urls of the fetch request on
 [a_game.js](frontend/js/a_game.js), [browse_game.js](frontend/js/browse_game.js), 
 [order.js](frontend/js/order.js), [order_complete.js](frontend/js/order_complete.js),
 and [index.js](frontend/js/index.js)
