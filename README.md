@@ -3,7 +3,7 @@
 # [README: Cross Course Project](https://github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland)
 by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
 
-This is the code for the front end of my food blog
+This is the code for the front end of my game store
 
 ## Built With
 - Html
@@ -13,20 +13,20 @@ This is the code for the front end of my food blog
 
 ## Get the code
 
-### With gh cli tool
+### With gh CLI tool
 You need to download gh cli tool [look here for information](https://github.com/cli/cli#installation)
 
 Fork the repo:
 ``` shell
-  $ gh repo fork git@github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland
+  $ gh repo fork https://github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland
 ```
 
-### With standard git cli
-You need to download git cli tool [look here for information](https://git-scm.com/downloads)
+### With standard git CLI
+You need to download git CLI tool [look here for information](https://git-scm.com/downloads)
 
 Clone the repo:
 ``` shell
-  $ git clone git@github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland
+  $ git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-Eirik-Haukeland
 ```
 
 Check the current remote:
@@ -39,7 +39,7 @@ Set the new remote:
   $ git remote set-url origin http://newserver/myproject.git 
 ```
 
-Verify that the remote has been sett properly:
+Verify that the remote has been set properly:
 ``` shell
   $ git remote -v
 ```
@@ -49,29 +49,29 @@ Push to new repo:
   $ git push origin master
 ```
 
-## Hosing the front end
-Once you have the repo you will need to sett up the web host:
+## Hosting the front end
+Once you have the repo you will need to setup the web host:
 
 You might use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site),
-Netlify [se here](https://docs.netlify.com/get-started/), or
-sett your own web server.
+Netlify [see here](https://docs.netlify.com/get-started/), or
+create your own web server.
 
 Be sure to set the frontend folder to the root folder
 of the web page
 
-## Setup cms whit docker
+## Setup CMS with docker
 I used WordPress with the "WooCommerce" plugin
 
-You will need a sql database like [mariadb](https://hub.docker.com/_/mariadb)
+You will need a SQL database like [mariadb](https://hub.docker.com/_/mariadb)
 or [mysql](https://hub.docker.com/_/mysql) then you will
-need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
+need to setup [WordPress](https://hub.docker.com/_/wordpress)
 
-### Set up the network for your container
+### Setup the network for your container
 ```shell
   $ docker network create [name-of-network]
 ```
 
-### Set up the database (here we are using mariadb)
+### Setup the database (here we are using mariadb)
 ```shell
   $ mkdir [path/to/db]
 
@@ -97,7 +97,6 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
        -v [path/to/wordpress]:/var/www/html \
       --name [wordpres-name] \
       -p 8080:80 \
-      -p 443:443 \
       -d wordpress
 ```
 
