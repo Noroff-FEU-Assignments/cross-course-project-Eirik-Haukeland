@@ -87,6 +87,7 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
       mariadb:latest
 ```
 
+
 ### set up the WordPress
 ```shell
   $ mkdir [path/to/wordpress]
@@ -100,7 +101,7 @@ need to add sett up a [WordPress](https://hub.docker.com/_/wordpress)
       -d wordpress
 ```
 
-### WordPress setup
+### WordPress connecting to the database
 when setting up the database:
 - set database name to the value from MARIADB_DATABASE (from the db setup)
 - set username to the value from MARIADB_USER (from the db setup)
@@ -115,6 +116,11 @@ when setting up the database:
 - go through the setup
 - afterwords you can go to the "products" tab and add you 
 products
+
+### setting links
+you need to do this so that you can accsess the wordpress rest-api
+- go to permalinks in the settings menu
+- change "Permalink structure" to "Day and name" (https://example.com/YYYY/MM/DD/sample-post/)
 
 ### change to code
 change the urls of the fetch request on
