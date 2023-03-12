@@ -1,0 +1,46 @@
+[
+  {
+    "id": "supplied by uuid",
+    "image": "path/to/file",
+    "image_desc": "description of image",
+    "title": "name of product",
+    "desc": "description of product",
+    "stars_img": "path/to/image/of/stars",
+    "stars_desc": "description of stars image",
+    "tags": [ "applay", "as", "needed" ],
+    "comments": [
+      {
+        "name": "Ola Norman",
+        "profile-picture": "/path/to/picture",
+        "message": "there comment"
+      },
+      {
+        "name": "Kari Norman",
+        "profile-picture": "/path/to/picture",
+        "message": "there comment"
+      }
+    ]
+  },
+  {
+    "id": "supplied by uuid",
+    "image": "path/to/file",
+    "image_desc": "description of image",
+    "title": "name of product",
+    "desc": "description of product",
+    "stars_img": "path/to/image/of/stars",
+    "stars_desc": "description of stars image",
+    "tags": [ "applay", "as", "needed" ],
+    "comments": [
+      {
+        "name": "Ola Norman",
+        "profile-picture": "/path/to/picture",
+        "message": "there comment"
+      },
+      {
+        "name": "Kari Norman",
+        "profile-picture": "/path/to/picture",
+        "message": "there comment"
+      }
+    ]
+  }
+]

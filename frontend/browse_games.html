@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/browse_games.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <meta name="description" content="browse computer games on Game Hub">
+  <script src="js/browse_game.js" defer type="module"></script>
+  <meta name="description" content="browse the games available on the Game Hub webstore">
+  <title>Game Hub - browse games</title>
+<!-- Hotjar Tracking Code for gamehub - ebh -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3260832,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="module" defer>
+  import shoppingCartOnLoad from "./js/shoppingCartOnLoad.js"
+  shoppingCartOnLoad();
+</script>
+</head>
+<header>
+  <a href="index.html">
+    <img class="logo" src="images/GameHub_Logo.png" alt="GameHub_Logo">
+  </a>
+  <div class="page-navigation">
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="index.html" rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/home.svg" alt="home">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="browse_games.html"  rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/games.svg" alt="games">
+            <span>Games</span>
+          </a>
+        </li>
+        <li>
+          <a href="order.html"  rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/shopping-cart.svg" alt="shopping cart">
+            <span>Order</span>
+            <span id="items-in-cart" hidden>0</span>
+          </a>
+        </li>
+        <li>
+          <a href="create_user-account.html"  rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/profile.svg" alt="profile">
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <form action="post">
+      <label for="search_box">search</label>
+      <input type="text" name="search_box" id="search_box">
+      <label for="search_btn">search</label>
+      <button id="search_btn"><img src="images/icons/search.svg" alt="search"></button>
+    </form>
+  </div>
+</header>
+<ul class="bread_crumbs">
+  <li>
+    <a class="bread_crumb-item" href="index.html">
+      <div>Home</div>
+    </a>
+  </li>
+  <li>
+    <span class="bread_crumb-item">
+      <div>brows games</div>
+    </span>
+  </li>
+</ul>
+<main>
+  <h1 class="hide">Browe our games</h1>
+  <form action="" method="get">
+    <label class="hide" for="search_feld">name of game</label>
+    <input type="text" placeholder="game to search for" class="search_feld">
+    <div>
+      <label class="hide" for="category">category</label>
+      <select name="category" id="category">
+        <option selected value="all">select category</option>
+        <option value="online">online</option>
+        <option value="single player">single player</option>
+        <option value="multi player">multi player</option>
+        <option value="strategy">strategy</option>
+        <option value="role playing game">role playing game</option>
+        <option value="story rich">story rich</option>
+        <option value="horror">horror</option>
+        <option value="science fiction">science fiction</option>
+        <option value="fantasy">fantasy</option>
+        <option value="sport">sport</option>
+      </select>
+      <button id="search">search</button>
+    </div>
+  </form>
+  <section id="game_list" ></section>
+</main>
+<footer>
+  <section>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <ul>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="browse_games.html">Games</a></li>
+    </ul>
+    <ul>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html">Order</a></li>
+    </ul>
+  </section>
+  <section>
+    <ul id="sosial_links">
+      <li><a href="twitter.com"><img src="images/icons/twitter-logo.svg" alt="twitter icon"></a></li>
+      <li><a href="mailto:mail@gamehub.com"><img src="images/icons/mail.svg" alt="mail icon"></a></li>
+      <li><a href="facebook.com"><img src="images/icons/facebook-logo.svg" alt="facebook icon"></a></li>
+    </ul>
+  </section>
+  <span>&copy copyright 2022</span>
+</footer>
+
+</html>

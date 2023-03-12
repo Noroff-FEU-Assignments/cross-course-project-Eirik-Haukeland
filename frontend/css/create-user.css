@@ -1,0 +1,14 @@
+@import url(accordion.css);
+@import url(text-form.css);
+@import url(payment.css);
+
+h2 {
+  margin-top: .25rem;
+  margin-bottom: 1.5rem;
+}
+
+.create-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

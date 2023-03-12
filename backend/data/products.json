@@ -1,0 +1,232 @@
+[
+  {
+    "id": "1",
+    "image": "images/assets/GameHub_covers_assassin.jpg",
+    "image_desc": "stylised image of a ninja colord in yellow and purpule",
+    "title": "Assassin",
+    "desc": "The biggest strength of Voitse is the element of surprise via quick and sudden movements. By manipulating the speed of your challenger your opponent can become overconfident and leave an opening, making it easier to overcome their strengths.",
+    "stars_img": "images/icons/stars_5-star-rank.svg",
+    "stars_desc": "5",
+    "tags": ["single player", "story rich", "role playing game"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "James bond the fourth",
+        "profile-picture": "../images/profile_pictures/james-bond-nr.4_croped-300*300.jpg",
+        "message": "007 here. I'll report in an hour.  ... better make that two"
+      },
+      {
+        "name": "Jeff Lebowski",
+        "profile-picture": "../images/profile_pictures/jeff-lebowski_croped-150*150.jpg",
+        "message": "Yeah, well - the Dude abides"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "image": "images/assets/GameHub_covers_black.jpg",
+    "image_desc": "skeletal arms reaching to the moon with someone in hoody in forground",
+    "title": "Black",
+    "desc": "The creature was half as tall as a man and moved crouched and close to the ground. Its nightmarish frame was gaunt and emaciated. Its body appeared to be covered in teeth growing out of its skin. It had 2 arms that were long and stick like. Two grotesque arms sprouted from its back like wings. Its face was skull like. Its mouth was filled with glowing teeth. It had a single bulging pastel green stock for an eye.",
+    "stars_img": "images/icons/stars_3-star-rank.svg",
+    "stars_desc": "3",
+    "tags": ["single player", "story rich", "horror"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "Clarise Starling",
+        "profile-picture": "../images/profile_pictures/clarise-starling_croped-300*300.jpg",
+        "message": "If Lecter thinks you're his enemy, maybe we'd have better luck if I went in by myself."
+      },
+      {
+        "name": "Leia Skywalker",
+        "profile-picture": "../images/profile_pictures/leia_skywalker_croped_450*450.jpg",
+        "message": "I knew there was more to you than money."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "image": "images/assets/GameHub_covers_super-duper.jpg",
+    "image_desc": "a child wering a denem jacket as a cape and a i mask colerd in yellow",
+    "title": "Super duper",
+    "desc": "Every year the Festival of Candles is celebrated with eager participation. It's a holiday with time-honored roots, but today it is mostly associated with athletic competitions, wearing homemade costumes, telling jokes and helping strangers. It is officially celebrated for nine days, but decorations are often seen weeks before the actual celebrations.",
+    "stars_img": "images/icons/stars_4-star-rank.svg",
+    "stars_desc": "4",
+    "tags": ["single player", "role playing game", "online"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "Ola Norman",
+        "profile-picture": "../images/profile_pictures/ola-norman_croped-475*475.jpg",
+        "message": "pweu, pweu, bang, bang"
+      },
+      {
+        "name": "Clarise Starling",
+        "profile-picture": "../images/profile_pictures/clarise-starling_croped-300*300.jpg",
+        "message": "If Lecter thinks you're his enemy, maybe we'd have better luck if I went in by myself."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "image": "images/assets/GameHub_covers_space-war.jpg",
+    "image_desc": "picture of planest form space",
+    "title": "space war",
+    "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem non expedita iure porro impedit eum, enim amet modi! Alias nam at deleniti cum soluta asperiores exercitationem. Optio mollitia ad cumque.",
+    "stars_img": "images/icons/stars_5-star-rank.svg",
+    "stars_desc": "5",
+    "tags": ["online", "multi player", "strategy", "science fiction"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "James bond the fourth",
+        "profile-picture": "../images/profile_pictures/james-bond-nr.4_croped-300*300.jpg",
+        "message": "“007 here. I'll report in an hour.  ... better make that two”"
+      },
+      {
+        "name": "Leia Skywalker",
+        "profile-picture": "../images/profile_pictures/leia_skywalker_croped_450*450.jpg",
+        "message": "I knew there was more to you than money."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "image": "images/assets/GameHub_covers_racing.jpg",
+    "image_desc": "a checker patern start flag on a black backgound",
+    "title": "Racing",
+    "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem non expedita iure porro impedit eum, enim amet modi! Alias nam at deleniti cum soluta asperiores exercitationem. Optio mollitia ad cumque.",
+    "stars_img": "images/icons/stars_4-star-rank.svg",
+    "stars_desc": "4",
+    "tags": ["single player", "multi player", "sport", "online"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "Ola Norman",
+        "profile-picture": "../images/profile_pictures/ola-norman_croped-475*475.jpg",
+        "message": "pweu, pweu, bang, bang"
+      },
+      {
+        "name": "Leia Skywalker",
+        "profile-picture": "../images/profile_pictures/leia_skywalker_croped_450*450.jpg",
+        "message": "I knew there was more to you than money."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "image": "images/assets/GameHub_covers_ping-pong-championship.jpg",
+    "image_desc": "two red ping pong paddles and a white ping pong ball on a blue backgound",
+    "title": "ping pong championship",
+    "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem non expedita iure porro impedit eum, enim amet modi! Alias nam at deleniti cum soluta asperiores exercitationem. Optio mollitia ad cumque.",
+    "stars_img": "images/icons/stars_4-star-rank.svg",
+    "stars_desc": "4",
+    "tags": ["single player", "multi player", "sport", "online"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "Leia Skywalker",
+        "profile-picture": "../images/profile_pictures/leia_skywalker_croped_450*450.jpg",
+        "message": "I knew there was more to you than money."
+      },
+      {
+        "name": "Kari Norman",
+        "profile-picture": "../images/profile_pictures/kari-norman_croped-450*450.jpg",
+        "message": "awsome, like tots awsome"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "image": "images/assets/GameHub_covers_furious.jpg",
+    "image_desc": "angery monky on dark background",
+    "title": "Furious",
+    "desc": "The creature was half again taller than a man and moved around on four legs. Its pasty skin looked smeared over its immense muscles. Its body appeared to be covered in a dense exosceleton.",
+    "stars_img": "images/icons/stars_4-star-rank.svg",
+    "stars_desc": "4",
+    "tags": ["single player", "online", "horror"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "James bond the fourth",
+        "profile-picture": "../images/profile_pictures/james-bond-nr.4_croped-300*300.jpg",
+        "message": "“007 here. I'll report in an hour.  ... better make that two”"
+      },
+      {
+        "name": "Clarise Starling",
+        "profile-picture": "../images/profile_pictures/clarise-starling_croped-300*300.jpg",
+        "message": "If Lecter thinks you're his enemy, maybe we'd have better luck if I went in by myself."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "image": "images/assets/GameHub_covers_forge-legend.jpg",
+    "image_desc": "elf in a shower of sparcs on a blue background",
+    "title": "forge legend",
+    "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem non expedita iure porro impedit eum, enim amet modi! Alias nam at deleniti cum soluta asperiores exercitationem. Optio mollitia ad cumque.",
+    "stars_img": "images/icons/stars_5-star-rank.svg",
+    "stars_desc": "5",
+    "tags": ["single player", "role playing game", "fantasy"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "Ola Norman",
+        "profile-picture": "../images/profile_pictures/ola-norman_croped-475*475.jpg",
+        "message": "pweu, pweu, bang, bang"
+      },
+      {
+        "name": "Jeff Lebowski",
+        "profile-picture": "../images/profile_pictures/jeff-lebowski_croped-150*150.jpg",
+        "message": "Yeah, well - the Dude abides"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "image": "images/assets/GameHub_covers_cyberpunk.jpg",
+    "image_desc": "purpule heeded woman whit a ligth saber like cleaver on a deep purpule background",
+    "title": "cyberpunk",
+    "desc": "Ilaektra “Starchaser” Zal is the youngest Sergeant in the history of the Planetary Guard, and daughter of Titaen Zal, Commander of the airspace above Ki, and of all the Planetary Guard. She normally works routine shifts at the transfer center, supervising security of all transportation operations between Ki and it’s satellite, Ma. But her father recruits her for a mysterious mission that takes the two of them deep underground into the Guard headquarters and into a largely abandoned section he calls “The Arc Section.” When she realizes the mission is unsanctioned, she is hesitant, but her father explains to her that he has received information about “prepping” “control planet 13” and that he “isn’t going to let that happen.” When Ilaektra, who believes in the control planet experiments, asks him why, he informs her that in order to begin a new control planet, all previous life will be wiped, to which Ilaektra answers, “So?”",
+    "stars_img": "images/icons/stars_5-star-rank.svg",
+    "stars_desc": "5",
+    "tags": ["single player", "role playing game", "science fiction"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "James bond the fourth",
+        "profile-picture": "../images/profile_pictures/james-bond-nr.4_croped-300*300.jpg",
+        "message": "“007 here. I'll report in an hour.  ... better make that two”"
+      },
+      {
+        "name": "Kari Norman",
+        "profile-picture": "../images/profile_pictures/kari-norman_croped-450*450.jpg",
+        "message": "awsome, like tots awsome"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "image": "images/assets/GameHub_covers_boxer.jpg",
+    "image_desc": "boxer makes a strait rigth on a smoky background",
+    "title": "Boxer",
+    "desc": "figth. rise to the topp in vr boxing on line and story mode",
+    "stars_img": "images/icons/stars_3-star-rank.svg",
+    "stars_desc": "3",
+    "tags": ["single player", "sport", "online"],
+    "prise": "499",
+    "comments": [
+      {
+        "name": "Ola Norman",
+        "profile-picture": "../images/profile_pictures/ola-norman_croped-475*475.jpg",
+        "message": "pweu, pweu, bang, bang"
+      },
+      {
+        "name": "Kari norman",
+        "profile-picture": "../images/profile_pictures/kari-norman_croped-450*450.jpg",
+        "message": "awsome, like tots awsome"
+      }
+    ]
+  }
+]

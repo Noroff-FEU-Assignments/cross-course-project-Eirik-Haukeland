@@ -1,0 +1,74 @@
+.text-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-form > label{
+  margin-top: .75rem;
+  margin-left: 1.7rem;
+  align-self: flex-start;
+}
+
+.text-form > input,
+.text-form > label,
+.text-form > div > button {
+  margin-top: .5rem;
+  max-width: 75%;
+  border-radius: .25rem;
+}
+
+.text-form > input{
+  border: solid black .05rem;
+  background-color: var(--back-ground_yellow);
+}
+
+.text-form > input:hover,
+.text-form > input:focus {
+  outline: none;
+  background-color: var(--back-ground_yellow_on-hower);
+}
+
+.text-form > div {
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.text-form > div > button {
+  background-color: var(--back-ground_purpule-mid-high);
+  border: none;
+  padding: .25rem;
+  cursor: pointer;
+  min-width: 60%;
+}
+
+.text-form > div > button:hover {
+  background-color: var(--back-ground_purpule);
+}
+
+.text-form > div > button:not(:first-of-type) {
+  background-color: var(--back-ground_purpule-ligth);
+}
+
+.text-form > div > button:not(:first-of-type):hover {
+  background-color: var(--back-ground_purpule-medium);
+}
+
+@media only screen and (max-width: 515px) {
+  .text-form > input,
+  .text-form > label,
+  .text-form > div > button {
+    margin-top: .5rem;
+    border-radius: .25rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .text-form > div {
+    flex-direction: column;
+    align-items: center
+  };
+}

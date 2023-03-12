@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="this page lett you see and change profile information">
+  <title>profile page</title>
+  <script src="js/main.js" defer type="module"></script>
+  <script src="js/profile.js" defer type="module"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<!-- Hotjar Tracking Code for gamehub - ebh -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3260832,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="module" defer>
+  import shoppingCartOnLoad from "./js/shoppingCartOnLoad.js"
+  shoppingCartOnLoad();
+</script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="images/GameHub_Logo.png" alt="GameHub_Logo">
+    </a>
+    <div class="page-navigation">
+      <nav id="main-nav">
+        <ul>
+          <li>
+            <a href="index.html" rel="noopener noreferrer" class="nav-item">
+              <img src="images/icons/home.svg" alt="home">
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="browse_games.html" rel="noopener noreferrer" class="nav-item">
+              <img src="images/icons/games.svg" alt="games">
+              <span>Games</span>
+            </a>
+          </li>
+          <li>
+            <a href="order.html" rel="noopener noreferrer" class="nav-item">
+              <img src="images/icons/shopping-cart.svg" alt="shopping cart">
+              <span>Order</span>
+              <span id="items-in-cart" hidden>0</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" rel="noopener noreferrer" class="nav-item">
+              <img src="images/icons/profile.svg" alt="profile">
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <form action="post">
+        <label for="search_box">search</label>
+        <input type="text" name="search_box" id="search_box">
+        <label for="search_btn">search</label>
+        <button id="search_btn"><img src="images/icons/search.svg" alt="search"></button>
+      </form>
+    </div>
+  </header>
+  <ul class="bread_crumbs">
+    <li>
+      <a class="bread_crumb-item" href="index.html">
+        <div>Home</div>
+      </a>
+    </li>
+    <li>
+      <span class="bread_crumb-item">
+        <div>profile infromation</div>
+      </span>
+    </li>
+  </ul>
+  <main>
+    <h1 class="hide">profile page</h1>
+    <section class="accordion">
+      <button id="user-info-btn" class="active">user profile</button>
+      <div id="user-info-div">
+        <div class="user-info">
+          <img src="images/icons/profile.svg" alt="profile picture">
+          <div>
+            <p>ola Norman</p>
+            <p>age: 22</p>
+          </div>
+          <div>
+            <label for="email-addr">email:</label>
+            <p id="email-addr">ola-norman@email.com</p>
+          </div>
+          <div>
+            <label for="phone-number">phone number:</label>
+            <p id="phone-number">+47 111 22 333</p>
+          </div>
+          <a href="your_games.html">user libery of games</a>
+        </div>
+      </div>
+      <button id="change-password-btn">password</button>
+      <div id="change-password-div" hidden>
+        <form action="" method="get" id="password-settings" class="text-form">
+          <label for="current-pass">current password</label>
+          <input type="password" name="current-pass" id="current-pass">
+          <label for="new-pass">new password</label>
+          <input type="password" name="new-pass" id="new-pass">
+          <label for="rep-new-pass">repeat password</label>
+          <input type="password" name="rep-new-pass" id="rep-new-pass">
+          <div>
+            <button>change password</button>
+          </div>
+        </form>
+      </div>
+      <button id="payment-detals-btn">payment detals</button>
+      <div id="payment-detals-div" hidden>
+        <div class="payment">
+          <button>
+            <img src="images/icons/vipps_logo.svg" alt="logo for vipps">
+          </button>
+          <button>
+            <img src="images/icons/visa_logo.svg" alt="logo for visa">
+          </button>
+          <button>
+            <img src="images/icons/master-card_logo.svg" alt="logo for master card">
+          </button>
+          <button>
+            <img src="images/icons/paypal_logo.svg" alt="logo for paypal">
+          </button>
+          <form action="" method="get" id="">
+            <label for="card-numb">card number</label>
+            <input type="text" id="card-numb">
+            <label for="card-name">name on card</label>
+            <input type="text" id="card-name">
+            <label for="card-expiers">experation date</label>
+            <input type="text" id="card-expiers">
+            <label for="sec-code">security code</label>
+            <input type="text" id="sec-code">
+            <div>
+              <button>update payment</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <ul>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="browse_games.html">Games</a></li>
+      </ul>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </section>
+    <section>
+      <ul id="sosial_links">
+        <li><a href="twitter.com"><img src="images/icons/twitter-logo.svg" alt="twitter icon"></a></li>
+        <li><a href="mailto:mail@gamehub.com"><img src="images/icons/mail.svg" alt="mail icon"></a></li>
+        <li><a href="facebook.com"><img src="images/icons/facebook-logo.svg" alt="facebook icon"></a></li>
+      </ul>
+    </section>
+    <span>&copy copyright 2022</span>
+  </footer>
+</body>
+
+</html>

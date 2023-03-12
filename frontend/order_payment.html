@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/chekout-payment.css">
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <meta name="description" content="set payment information on order">
+  <script src="js/debit_validation.js" defer></script>
+  <title>Game Hub - checkout - payment information</title>
+  <!-- Hotjar Tracking Code for gamehub - ebh -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3260832,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+</head>
+<header>
+  <a href="index.html">
+    <img class="logo" src="images/GameHub_Logo.png" alt="GameHub_Logo">
+  </a>
+</header>
+<main>
+  <h1>shopping cart</h1>
+  <h2>payment information</h2>
+  <div class="payment">
+    <button>
+      <img src="images/icons/vipps_logo.svg" alt="logo for vipps">
+    </button>
+    <button>
+      <img src="images/icons/visa_logo.svg" alt="logo for visa">
+    </button>
+    <button>
+      <img src="images/icons/master-card_logo.svg" alt="logo for master card">
+    </button>
+    <button>
+      <img src="images/icons/paypal_logo.svg" alt="logo for paypal">
+    </button>
+    <form action="./order_complete.html" method="get" id="debit">
+      <label for="card-numb">card number</label>
+      <input type="text" id="card-numb">
+      <label for="card-name">name on card</label>
+      <input type="text" id="card-name">
+      <label for="card-expiers">experation date</label>
+      <fieldset id="card-expiers">
+        <input type="number" id="card-expiers-day" min="1" max="31">
+        <input type="number" id="card-expiers-month" min="1" max="12">
+        <input type="number" id="card-expiers-year" min="1900" max="2200">
+      </fieldset>
+      <label for="sec-code">security code</label>
+      <input type="text" id="sec-code">
+      <div class="btn-div">
+        <button type="submit" id="add-payment-submit" class="btn">continue</button>
+        <a href="index.html" class="btn">cansel</a>
+      </div>
+    </form>
+  </div>
+</main>
+</html>

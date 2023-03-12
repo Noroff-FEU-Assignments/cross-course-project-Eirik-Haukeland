@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <meta name="description" content="by and sell computer games with us">
+  <title>Game Hub</title>
+  <!-- Hotjar Tracking Code for gamehub - ebh -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3260832,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <script src="js/index.js" type="module" defer></script>
+</head>
+<header>
+  <a href="index.html">
+    <img class="logo" src="images/GameHub_Logo.png" alt="GameHub_Logo">
+  </a>
+  <div class="page-navigation">
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="index.html" rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/home.svg" alt="home">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="browse_games.html" rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/games.svg" alt="games">
+            <span>Games</span>
+          </a>
+        </li>
+        <li>
+          <a href="order.html" rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/shopping-cart.svg" alt="shopping cart">
+            <span>Order</span>
+            <span id="items-in-cart" hidden>0</span>
+          </a>
+        </li>
+        <li>
+          <a href="create_user-account.html" rel="noopener noreferrer" class="nav-item">
+            <img src="images/icons/profile.svg" alt="profile">
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <form action="post">
+      <label for="search_box">search</label>
+      <input type="text" name="search_box" id="search_box">
+      <label for="search_btn">search</label>
+      <button id="search_btn"><img src="images/icons/search.svg" alt="search"></button>
+    </form>
+  </div>
+</header>
+<ul class="bread_crumbs">
+  <li>
+    <span class="bread_crumb-item"">
+      <div>Home</div>
+    </span>
+  </li>
+</ul>
+<main>
+  <section aria-labelledby="univers_of_games">
+    <h1 id="univers_of_games">The universe of games</h1>
+    <p class="page_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit ipsam perspiciatis
+      corporis fugiat. Suscipit repellendus placeat tempora nemo facilis iste modi deleniti exercitationem optio?
+      Tenetur nam sit veritatis alias.</p>
+  </section>
+  <section aria-labelledby="custumer_revues">
+    <h2 id="custumer_revues">custumer revues</h2>
+    <div class="revue_card">
+      <img src="images/profile_pictures/jeff-lebowski_croped-150*150.jpg" alt="image of Jeff Lebowski">
+      <span>Jeff Lebowski</span>
+      <p><strong><q>Yeah, well - the dude abides</q></strong></p>
+    </div>
+    <div class="revue_card">
+      <img src="images/profile_pictures/clarise-starling_croped-300*300.jpg" alt="image of Calrise Starling">
+      <span>Clarise Startling</span>
+      <p><strong><q>If he think's of you as his enemy, maybe we'd have better luck if I went in by my self</q></strong>
+      </p>
+    </div>
+    <div class="revue_card">
+      <img src="images/profile_pictures/james-bond-nr.4_croped-300*300.jpg" alt="image go james bond the fourth">
+      <span>james bond the fourth</span>
+      <p><strong><q>007 here. I'll report in an hour. ... Better make that two</q></strong></p>
+    </div>
+  </section>
+  <section id="featured-games" aria-labelledby="populare_games">
+    <h2 id="populare_games">populare games</h2>
+    <a class="game_card" href="a_game.html?id=7" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_furious.jpg" alt="cover to furious">
+      <div>
+        <p class="game_card-title"><strong>Furious</strong></p>
+        <p class="game_card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <img class="game_card-stars" src="images/icons/stars_1-star-rank.svg" alt="one out of five stars">
+      </div>
+    </a>
+    <a class="game_card" href="a_game.html?id=4" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_space-war.jpg" alt="cover to space war">
+      <div>
+        <p class="game_card-title"><strong>Space War</strong></p>
+        <p class="game_card-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <img class="game_card-stars" src="images/icons/stars_2-star-rank.svg" alt="one out of five stars">
+      </div>
+    </a>
+    <a class="game_card" href="a_game.html?id=8" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_forge-legend.jpg" alt="cover to forge legend">
+      <div>
+        <p class="game_card-title"><strong>Forge Legend</strong></p>
+        <p class="game_card-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <img class="game_card-stars" src="images/icons/stars_3-star-rank.svg" alt="one out of five stars">
+      </div>
+    </a>
+    <a href="a_game.html?id=1" class="game_card" rel="noopener noreferrer">
+      <img src="images/assets/GameHub_covers_assassin.jpg" alt="cover to assassin">
+      <div>
+        <p class="game_card-title"><strong>Assassin</strong></p>
+        <p class="game_card-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <img class="game_card-stars" src="images/icons/stars_4-star-rank.svg" alt="one out of five stars">
+      </div>
+    </a>
+  </section>
+</main>
+<footer>
+  <section>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <ul>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="browse_games.html">Games</a></li>
+    </ul>
+    <ul>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html">Order</a></li>
+    </ul>
+  </section>
+  <section>
+    <ul id="sosial_links">
+      <li><a href="twitter.com"><img src="images/icons/twitter-logo.svg" alt="twitter icon"></a></li>
+      <li><a href="mailto:mail@gamehub.com"><img src="images/icons/mail.svg" alt="mail icon"></a></li>
+      <li><a href="facebook.com"><img src="images/icons/facebook-logo.svg" alt="facebook icon"></a></li>
+    </ul>
+  </section>
+  <span>&copy copyright 2022</span>
+</footer>
+
+</html>

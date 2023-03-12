@@ -1,0 +1,5 @@
+@import url(checkout.css);
+
+main{
+  background-image: url('../images/icons/checkout-second-step.svg');
+}

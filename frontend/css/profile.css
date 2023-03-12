@@ -1,0 +1,13 @@
+@import url(accordion.css);
+@import url(text-form.css);
+@import url(payment.css);
+@import url(user-info.css);
+
+main{
+  height: auto;
+}
+
+.hide {
+  position: fixed;
+  left: 100rem;
+}
